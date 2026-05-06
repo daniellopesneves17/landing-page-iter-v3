@@ -5,52 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
   <title>ITER Eficiência Financeira | Consultoria Financeira Especializada</title>
-  <meta name="description" content="A ITER é uma consultoria financeira especializada em soluções completas: investimentos, seguros, planos de saúde, crédito e planejamento patrimonial. 10 anos de experiência. Faça seu diagnóstico gratuito.">
-  <meta name="keywords" content="consultoria financeira, planejamento financeiro, investimentos, seguros de vida, planos de saúde, proteção patrimonial, ITER, eficiência financeira">
+  <meta name="description" content="Consultoria financeira premium para organizar patrimônio, proteger renda, estruturar investimentos e tomar decisões com clareza. Solicite uma análise gratuita com a ITER.">
+  <meta name="keywords" content="consultoria financeira, planejamento financeiro, investimentos, proteção patrimonial, seguros, planos de saúde, ITER, eficiência financeira">
   <meta property="og:title" content="ITER Eficiência Financeira | Consultoria Financeira Especializada">
-  <meta property="og:description" content="Transforme suas finanças com a ITER. 10 anos de experiência em planejamento financeiro personalizado.">
+  <meta property="og:description" content="Estratégia financeira, proteção patrimonial e decisões de longo prazo para quem não pode errar.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary_large_image">
-  <script>
-    (function () {
-      try {
-        const narrow = window.matchMedia('(max-width: 1200px)').matches;
-        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const cores = navigator.hardwareConcurrency || 8;
-        const memory = navigator.deviceMemory || 8;
-        if (narrow || reduceMotion || cores <= 8 || memory <= 8) {
-          document.documentElement.classList.add('performance-mode');
-        }
-      } catch (e) {}
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --color-primary: #5ebc60;
       --color-accent: #f59e0b;
-      --color-dark: #0a0f1e;
-      --color-dark-2: #0f1829;
-      --color-dark-3: #141f35;
-      --color-secondary: #2e476d;
-      --color-text: #e8edf5;
-      --color-text-muted: #8a9bb8;
-      --color-glass: rgba(255,255,255,0.04);
-      --color-glass-border: rgba(255,255,255,0.08);
-      --color-green-glow: rgba(94,188,96,0.15);
-      --color-amber-glow: rgba(245,158,11,0.15);
-      --font-body: 'Manrope', sans-serif;
-      --font-display: 'Instrument Serif', serif;
-      --font-mono: 'IBM Plex Mono', monospace;
-      --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.35);
-      --container: 1240px;
-      --radius: 16px;
+      --color-dark: #07101e;
+      --color-dark-2: #0b1424;
+      --color-card: #111c2f;
+      --color-card-2: #17243a;
+      --color-text: #f4f7fb;
+      --color-text-muted: #9eb0cc;
+      --color-line: rgba(255, 255, 255, 0.10);
+      --color-glass: rgba(255, 255, 255, 0.045);
+      --color-green-glow: rgba(94, 188, 96, 0.28);
+      --color-amber-glow: rgba(245, 158, 11, 0.32);
+      --max-width: 1180px;
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --shadow-soft: 0 28px 80px rgba(0, 0, 0, 0.38);
       --transition: 0.3s ease;
-      --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    * , *::before, *::after {
+    *, *::before, *::after {
       box-sizing: border-box;
     }
 
@@ -60,14 +46,33 @@
 
     body {
       margin: 0;
-      font-family: var(--font-body);
-      color: var(--color-text);
-      background: var(--color-dark);
-      overflow-x: hidden;
       min-width: 320px;
-      color-scheme: dark;
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      background: var(--color-dark);
+      color: var(--color-text);
+      font-family: "Manrope", sans-serif;
+      line-height: 1.55;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 82% 8%, rgba(94, 188, 96, 0.16), transparent 30%),
+        radial-gradient(circle at 8% 22%, rgba(245, 158, 11, 0.10), transparent 28%),
+        linear-gradient(135deg, #050914 0%, var(--color-dark) 42%, #0a1423 100%);
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.13;
+      background-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
     }
 
     a {
@@ -82,106 +87,126 @@
       font: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
+    button,
+    .button {
+      min-height: 48px;
     }
 
     .container {
-      width: min(100% - 32px, var(--container));
+      width: min(var(--max-width), calc(100% - 40px));
       margin: 0 auto;
     }
 
     .section {
       position: relative;
-      padding: 110px 0;
-      content-visibility: auto;
-      contain-intrinsic-size: 900px;
-    }
-
-    section[id] {
-      scroll-margin-top: 110px;
-    }
-
-    .section-tight {
-      padding: 84px 0;
+      padding: clamp(72px, 8vw, 120px) 0;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 12px;
+      gap: 12px;
+      margin: 0 0 18px;
       color: var(--color-primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      width: 34px;
+      width: 38px;
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--color-primary));
-      opacity: 0.9;
+      background: currentColor;
+      opacity: 0.75;
     }
 
-    h1, h2, h3, h4 {
-      font-family: var(--font-display);
-      margin: 0;
-      line-height: 1;
-      letter-spacing: -0.04em;
-    }
-
-    h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      line-height: 0.95;
-      max-width: 10ch;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: 1.02;
-      max-width: 14ch;
-    }
-
+    h1,
+    h2,
+    h3,
     p {
-      margin: 0;
-      color: var(--color-text-muted);
-      line-height: 1.7;
-      font-size: clamp(1rem, 1.2vw, 1.06rem);
+      margin-top: 0;
     }
 
-    .muted {
-      color: var(--color-text-muted);
+    h1,
+    h2,
+    h3 {
+      font-family: "Archivo", sans-serif;
+      letter-spacing: -0.045em;
+      line-height: 0.96;
     }
 
-    .accent {
+    .display-title {
+      max-width: 1080px;
+      margin-bottom: 22px;
+      font-size: clamp(2.65rem, 5.15vw, 5.75rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.02;
+    }
+
+    .section-title {
+      max-width: 1040px;
+      margin-bottom: 22px;
+      font-size: clamp(2rem, 3.85vw, 4.2rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.02;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: var(--color-text-muted);
+      font-size: clamp(1rem, 1.7vw, 1.24rem);
+    }
+
+    .text-green {
       color: var(--color-primary);
     }
 
-    .accent-amber {
+    .text-amber {
       color: var(--color-accent);
     }
 
-    .glass {
-      background: var(--color-glass);
-      border: 1px solid var(--color-glass-border);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.035);
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 999px;
+      padding: 15px 24px;
+      color: #09101c;
+      background: var(--color-accent);
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      box-shadow: 0 18px 45px var(--color-amber-glow);
     }
 
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(94,188,96,0.35), transparent);
-      margin: 0 auto;
-      width: min(100% - 32px, var(--container));
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 60px var(--color-amber-glow);
+    }
+
+    .button-green {
+      background: var(--color-primary);
+      box-shadow: 0 18px 45px var(--color-green-glow);
+    }
+
+    .button-ghost {
+      color: var(--color-text);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--color-line);
+      box-shadow: none;
     }
 
     .animate-hidden {
       opacity: 0;
-      transform: translateY(40px);
+      transform: translateY(34px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
@@ -190,2183 +215,1672 @@
       transform: translateY(0);
     }
 
-    .stagger-1 { transition-delay: 0.05s; }
-    .stagger-2 { transition-delay: 0.12s; }
-    .stagger-3 { transition-delay: 0.18s; }
-    .stagger-4 { transition-delay: 0.24s; }
-    .stagger-5 { transition-delay: 0.3s; }
-
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* Header */
-    .header {
+    .site-header {
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 50;
       width: 100%;
-      z-index: 1000;
-      transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
+      transition: background var(--transition), border-color var(--transition), backdrop-filter var(--transition);
     }
 
-    .header.scrolled {
-      background: rgba(10,15,30,0.95);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.32);
+    .site-header.scrolled {
+      background: rgba(7, 16, 30, 0.88);
+      border-bottom: 1px solid var(--color-line);
+      backdrop-filter: blur(18px);
     }
 
-    .nav {
+    .header-inner {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 84px;
+      justify-content: space-between;
+      min-height: 82px;
     }
 
-    .brand {
-      display: inline-flex;
-      flex-direction: column;
-      gap: 3px;
-      min-width: max-content;
+    .logo {
+      display: grid;
+      gap: 2px;
     }
 
-    .brand strong {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
+    .logo strong {
+      font-family: "Archivo", sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
       letter-spacing: -0.05em;
-      line-height: 1;
     }
 
-    .brand span {
-      font-size: 0.68rem;
-      letter-spacing: 0.2em;
+    .logo span {
       color: var(--color-text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
 
-    /* Hero */
-    #hero {
-      min-height: 100vh;
-      padding-top: 120px;
-      display: flex;
+    .hero {
+      min-height: 100svh;
+      padding: 118px 0 58px;
+      display: grid;
       align-items: center;
-      background: transparent;
-      position: relative;
-      overflow: hidden;
+      isolation: isolate;
     }
 
-    #hero::before {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-      background-size: 88px 88px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), transparent 85%);
-      opacity: 0.55;
-      pointer-events: none;
-    }
-
-    .hero-orb {
-      position: absolute;
-      border-radius: 999px;
-      filter: blur(42px);
-      opacity: 0.82;
-      will-change: transform, opacity;
-      animation: floatOrb 22s ease-in-out infinite;
-      pointer-events: none;
-    }
-
-    .hero-orb.one {
-      width: 300px;
-      height: 300px;
-      background: rgba(94,188,96,0.26);
-      top: 9%;
-      left: 3%;
-    }
-
-    .hero-orb.two {
-      width: 260px;
-      height: 260px;
-      background: rgba(245,158,11,0.2);
-      right: 4%;
-      top: 10%;
-      animation-delay: -3s;
-    }
-
-    .hero-orb.three {
-      width: 140px;
-      height: 140px;
-      background: rgba(46,71,109,0.18);
-      right: 22%;
-      bottom: 18%;
-      animation-delay: -6s;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
     }
 
     .hero-layout {
-      position: relative;
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 44px;
+      grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.58fr);
+      gap: clamp(34px, 6vw, 82px);
       align-items: center;
+    }
+
+    .efficiency-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: clamp(18px, 2.4vw, 30px);
+      align-items: stretch;
+    }
+
+    .efficiency-copy {
+      position: relative;
+      padding: clamp(30px, 4.5vw, 52px);
+      border-radius: 30px;
+      border: 1px solid rgba(94, 188, 96, 0.14);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(94, 188, 96, 0.10), transparent 20%),
+        linear-gradient(180deg, rgba(16, 24, 39, 0.95), rgba(10, 15, 28, 0.95));
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+      overflow: hidden;
+      min-height: 100%;
+    }
+
+    .efficiency-copy::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.16), transparent 62%);
+      transform: translate(-35%, -35%);
+      pointer-events: none;
+    }
+
+    .efficiency-copy > * {
+      position: relative;
       z-index: 1;
     }
 
-    .hero-copy {
-      padding: 28px 0 36px;
+    .efficiency-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--color-accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
-    .hero-title {
-      margin-top: 0;
-      max-width: 11ch;
+    .efficiency-kicker::before {
+      content: "";
+      width: 38px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.75;
     }
 
-    .hero-title .line {
-      display: block;
-      overflow: clip;
-      padding-bottom: 0.08em;
-      margin-bottom: -0.08em;
-    }
-
-    .hero-title .line span {
-      display: inline-block;
-      transform: translateY(120%);
-      opacity: 0;
-      animation: revealUp 0.9s forwards;
-    }
-
-    .hero-title .line:nth-child(1) span { animation-delay: 0.2s; }
-    .hero-title .line:nth-child(2) span { animation-delay: 0.32s; }
-    .hero-title .line:nth-child(3) span { animation-delay: 0.44s; }
-    .hero-title .line:nth-child(4) span { animation-delay: 0.56s; }
-
-    .hero-title .accent {
-      text-shadow: 0 0 28px rgba(94,188,96,0.34);
-    }
-
-    .hero-subtitle {
-      margin-top: 22px;
-      max-width: 34rem;
-      font-size: clamp(1rem, 1.45vw, 1.25rem);
-      animation: fadeIn 0.8s ease 0.65s forwards;
-      opacity: 0;
-    }
-
-    .hero-side-title {
-      margin: 0;
-      max-width: 24ch;
-      font-family: var(--font-display);
-      font-size: clamp(1.85rem, 2.5vw, 2.65rem);
+    .efficiency-copy h2 {
+      margin: 0 0 16px;
+      max-width: 34ch;
+      font-size: clamp(1.95rem, 3.65vw, 3.7rem);
       line-height: 1.04;
-      letter-spacing: 0;
-      font-weight: 400;
+      letter-spacing: -0.04em;
+      text-transform: none;
+    }
+
+    .efficiency-copy p {
+      max-width: 62ch;
+      margin-bottom: 18px;
+      color: var(--color-text-muted);
+      font-size: 1.03rem;
+    }
+
+    .efficiency-points {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 28px;
+    }
+
+    .efficiency-point {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 12px;
+      align-items: start;
       color: var(--color-text);
-      text-wrap: balance;
+      font-size: 0.98rem;
+    }
+
+    .efficiency-point::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      margin-top: 5px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+      box-shadow: 0 0 18px rgba(94, 188, 96, 0.35);
+    }
+
+    .efficiency-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: clamp(28px, 4vw, 42px);
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.12), transparent 24%),
+        linear-gradient(180deg, rgba(9, 14, 25, 0.98), rgba(8, 12, 22, 0.98));
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.30);
+      min-height: 100%;
+    }
+
+    .efficiency-panel::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(94, 188, 96, 0.10);
+      pointer-events: none;
+    }
+
+    .efficiency-panel .efficiency-stat:first-child {
+      grid-column: 1 / -1;
+    }
+
+    .efficiency-stat {
+      position: relative;
+      padding: 20px 20px 20px 22px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .efficiency-stat strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--color-text);
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+
+    .efficiency-stat span {
+      color: var(--color-text-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .efficiency-stat.accent {
+      background: linear-gradient(180deg, rgba(94, 188, 96, 0.12), rgba(255, 255, 255, 0.04));
+      border-color: rgba(94, 188, 96, 0.20);
+    }
+
+    .efficiency-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .efficiency-tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--color-text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .efficiency-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(245, 158, 11, 0.14);
+      background: rgba(245, 158, 11, 0.08);
+      color: var(--color-text);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .hero-copy {
+      max-width: 1040px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      color: var(--color-primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero-kicker span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      box-shadow: 0 0 22px var(--color-primary);
+    }
+
+    .hero-lead {
+      max-width: 820px;
+      margin-bottom: 32px;
+      color: var(--color-text-muted);
+      font-size: clamp(1.08rem, 2vw, 1.44rem);
+      line-height: 1.55;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 32px;
-      animation: fadeIn 0.8s ease 0.8s forwards;
-      opacity: 0;
+      gap: 14px;
+      margin-bottom: 34px;
     }
 
-    .btn {
-      min-height: 52px;
-      padding: 16px 28px;
-      border-radius: 12px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      font-weight: 700;
-      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
-      border: 1px solid transparent;
-      cursor: pointer;
-      will-change: transform;
-    }
-
-    .btn-primary {
-      background: var(--color-accent);
-      color: #11131c;
-      box-shadow: none;
-    }
-
-    .btn-primary:hover,
-    .btn-primary:focus-visible {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: none;
-      outline: none;
-    }
-
-    .btn-ghost {
-      background: rgba(255,255,255,0.02);
-      color: var(--color-text);
-      border-color: var(--color-glass-border);
-    }
-
-    .btn-ghost:hover,
-    .btn-ghost:focus-visible {
-      border-color: rgba(94,188,96,0.45);
-      transform: translateY(-2px);
-      outline: none;
-    }
-
-    .floating-number {
-      position: absolute;
-      font-family: var(--font-mono);
-      font-size: clamp(0.75rem, 1.2vw, 1.1rem);
-      letter-spacing: 0.12em;
-      color: rgba(232,237,245,0.16);
-      pointer-events: none;
-      animation: float 8s ease-in-out infinite;
-      text-transform: uppercase;
-    }
-
-    .floating-number.a { top: 18%; left: 52%; }
-    .floating-number.b { top: 64%; left: 56%; animation-delay: -2s; }
-    .floating-number.c { top: 28%; right: 8%; animation-delay: -4s; }
-    .floating-number.d { bottom: 20%; left: 42%; animation-delay: -6s; }
-
-    /* About */
-    #sobre {
-      background: transparent;
-    }
-
-    .split-layout {
-      display: grid;
-      grid-template-columns: 1fr 0.92fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .copy-stack {
-      display: grid;
-      gap: 18px;
-      max-width: 44rem;
-    }
-
-    .copy-stack h2 {
-      max-width: 12ch;
-    }
-
-    .visual-card {
-      position: relative;
-      padding: 30px;
-      border-radius: 24px;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03)),
-        rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.2);
-    }
-
-    .visual-card::after {
-      content: "";
-      position: absolute;
-      inset: auto -40px -40px auto;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(94,188,96,0.3), transparent 65%);
-      pointer-events: none;
-    }
-
-    .visual-card .mission {
-      display: grid;
-      gap: 20px;
-    }
-
-    .visual-card h3 {
-      font-size: 1.4rem;
-      font-weight: 400;
-    }
-
-    .visual-card .label {
-      font-family: var(--font-mono);
-      color: var(--color-primary);
-      font-size: 0.72rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-
-    .visual-card .divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
-    }
-
-    .compass-wrap {
-      display: inline-flex;
-      width: 72px;
-      height: 72px;
-      align-items: center;
-      justify-content: center;
-      border-radius: 20px;
-      background: rgba(94,188,96,0.08);
-      border: 1px solid rgba(94,188,96,0.22);
-      color: var(--color-primary);
-      box-shadow: 0 0 40px rgba(94,188,96,0.12);
-    }
-
-    /* Numbers */
-    #numeros {
-      background: transparent;
-    }
-
-    .numbers-grid {
-      margin-top: 34px;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .number-card {
-      border-radius: 20px;
-      padding: 24px;
-      min-height: 168px;
-      display: grid;
-      align-content: space-between;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-    }
-
-    .number-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(94,188,96,0.28);
-      box-shadow: 0 18px 36px rgba(0,0,0,0.24), 0 0 0 1px rgba(94,188,96,0.08) inset;
-    }
-
-    .number-value {
-      font-family: var(--font-mono);
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--color-accent);
-      letter-spacing: -0.06em;
-    }
-
-    .number-card:nth-child(2) .number-value,
-    .number-card:nth-child(4) .number-value {
-      color: var(--color-primary);
-    }
-
-    .number-label {
-      color: var(--color-text-muted);
-      max-width: 14ch;
-    }
-
-    /* Services */
-    #servicos {
-      background: transparent;
-    }
-
-    .services-head {
-      display: grid;
-      gap: 18px;
-      max-width: 60rem;
-    }
-
-    .services-head h2 {
-      max-width: min(100%, 52rem);
-      text-wrap: balance;
-    }
-
-    #formulario .services-head h2 {
-      max-width: none;
-      width: min(100%, 38rem);
-      line-height: 1.08;
-      text-wrap: balance;
-    }
-
-    .services-grid {
-      margin-top: 38px;
+    .hero-proof {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 10px;
+      max-width: 780px;
     }
 
-    .services-list {
-      margin-top: 38px;
-      display: grid;
-      gap: 22px;
+    .proof-pill {
+      padding: 15px 16px;
+      border: 1px solid var(--color-line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.045);
     }
 
-    .service-item {
-      padding: 0;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 18px;
+    .proof-pill strong {
+      display: block;
+      color: var(--color-primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.9rem;
     }
 
-    .service-item h3 {
-      font-size: clamp(1.25rem, 2vw, 1.65rem);
-      margin-bottom: 10px;
+    .proof-pill span {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
     }
 
-    .service-item p {
-      max-width: 58rem;
-    }
-
-    .service-card {
+    .hero-panel {
       position: relative;
-      border-radius: 20px;
-      padding: 24px;
+      min-height: 580px;
+      border: 1px solid var(--color-line);
+      border-radius: 38px;
       overflow: hidden;
-      min-height: 280px;
-      display: grid;
-      align-content: start;
-      gap: 18px;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      background:
+        radial-gradient(circle at 68% 24%, rgba(94, 188, 96, 0.24), transparent 28%),
+        linear-gradient(150deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+      box-shadow: var(--shadow-soft);
     }
 
-    .service-card::before {
+    .hero-panel::before,
+    .hero-panel::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 4px;
-      background: linear-gradient(90deg, rgba(94,188,96,0.18), rgba(94,188,96,0.95), rgba(94,188,96,0.18));
-      opacity: 0.7;
+      inset: -20% 42% -20% auto;
+      width: 5px;
+      background: var(--color-accent);
+      transform: rotate(14deg);
+      box-shadow: 34px 0 0 rgba(245, 158, 11, 0.78), 68px 0 70px var(--color-amber-glow);
     }
 
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(94,188,96,0.35);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.24), 0 0 0 1px rgba(94,188,96,0.05) inset;
-    }
-
-    .service-icon {
-      width: 54px;
-      height: 54px;
-      color: var(--color-primary);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 16px;
-      background: rgba(94,188,96,0.08);
-      border: 1px solid rgba(94,188,96,0.18);
-      box-shadow: 0 0 28px rgba(94,188,96,0.1);
-    }
-
-    .service-badge {
-      display: inline-flex;
-      align-self: start;
-      padding: 7px 11px;
+    .hero-panel::after {
+      inset: auto -32% -18% 20%;
+      width: 62%;
+      height: 44%;
       border-radius: 999px;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: rgba(245,158,11,0.12);
-      color: var(--color-accent);
-      border: 1px solid rgba(245,158,11,0.22);
+      background: rgba(94, 188, 96, 0.14);
+      filter: blur(40px);
+      transform: rotate(-12deg);
+      box-shadow: none;
     }
 
-    .service-body {
+    .panel-content {
+      position: relative;
+      z-index: 2;
       display: grid;
-      gap: 12px;
+      align-content: end;
+      min-height: 580px;
+      padding: 30px;
     }
 
-    .service-body h3 {
-      font-size: 1.45rem;
+    .terminal-card {
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 24px;
+      padding: 24px;
+      background: rgba(8, 15, 28, 0.80);
+      backdrop-filter: blur(18px);
     }
 
-    .service-foot {
-      margin-top: auto;
+    .terminal-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 14px;
-    }
-
-    .service-progress {
-      height: 8px;
-      flex: 1;
-      background: rgba(255,255,255,0.05);
-      border-radius: 999px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .service-progress span {
-      display: block;
-      height: 100%;
-      width: 72%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, rgba(94,188,96,0.5), rgba(94,188,96,1));
-    }
-
-    .service-link {
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--color-text);
-      transition: color var(--transition);
-      white-space: nowrap;
-    }
-
-    .service-link:hover {
-      color: var(--color-primary);
-    }
-
-    /* Differentials */
-    #diferenciais {
-      background: transparent;
-    }
-
-    .differentials-list {
-      margin-top: 40px;
-      display: grid;
-      gap: 20px;
-    }
-
-    .differential {
-      position: relative;
-      padding: 30px 30px 30px 28px;
-      border-left: 3px solid var(--color-primary);
-      border-radius: 22px;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.028)),
-        rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow:
-        0 18px 50px rgba(0,0,0,0.16),
-        inset 0 1px 0 rgba(255,255,255,0.04);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      align-items: start;
-      transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
-    }
-
-    .differential::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(94,188,96,0.07), transparent 35%);
-      pointer-events: none;
-    }
-
-    .differential:hover {
-      transform: translateY(-5px);
-      border-color: rgba(94,188,96,0.22);
-      box-shadow:
-        0 24px 64px rgba(0,0,0,0.22),
-        0 0 0 1px rgba(94,188,96,0.05),
-        inset 0 1px 0 rgba(255,255,255,0.05);
-    }
-
-    .diff-icon {
-      width: 72px;
-      height: 72px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-primary);
-      border-radius: 24px;
-      background: linear-gradient(180deg, rgba(94,188,96,0.12), rgba(94,188,96,0.06));
-      border: 1px solid rgba(94,188,96,0.18);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.06),
-        0 12px 30px rgba(94,188,96,0.08);
-    }
-
-    .diff-copy {
-      display: grid;
-      gap: 12px;
-      max-width: none;
-      padding-top: 0;
-      justify-items: start;
-    }
-
-    .diff-copy h3 {
-      font-size: clamp(1rem, 1.55vw, 1.38rem);
-      line-height: 1.28;
-      letter-spacing: -0.03em;
-      font-weight: 400;
-      max-width: none;
-      text-wrap: balance;
-    }
-
-    .diff-copy p {
-      max-width: none;
-      line-height: 1.75;
-      color: var(--color-text-muted);
-    }
-
-    .diff-copy .diff-icon {
-      margin-bottom: 4px;
-    }
-
-    /* Form */
-    #formulario {
-      background: transparent;
-      overflow: hidden;
-    }
-
-    .form-shell {
-      position: relative;
-      margin-top: 36px;
-      width: min(100%, 1100px);
-      margin-left: auto;
-      margin-right: auto;
-      display: grid;
-      grid-template-columns: minmax(250px, 0.86fr) minmax(0, 1.14fr);
-      gap: 22px;
-      align-items: start;
-    }
-
-    .form-shell::before {
-      content: none;
-    }
-
-    .form-side {
-      position: relative;
-      overflow: hidden;
-      padding: 28px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
-    }
-
-    .form-side::before {
-      content: none;
-    }
-
-    .form-side h3 {
-      margin: 10px 0 12px;
-      font-family: var(--font-sans);
-      font-size: clamp(1.3rem, 2vw, 1.8rem);
-      line-height: 1.18;
-      letter-spacing: -0.03em;
-      color: var(--color-text);
-    }
-
-    .form-side p {
-      max-width: 28ch;
-      line-height: 1.72;
-      color: var(--color-text-muted);
-    }
-
-    .trust-list {
-      list-style: none;
-      display: grid;
-      gap: 14px;
-      margin: 24px 0 0;
-      padding: 0;
-    }
-
-    .trust-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      line-height: 1.5;
-      color: var(--color-text);
-    }
-
-    .trust-list li::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      margin-top: 0.5rem;
-      border-radius: 50%;
-      background: var(--color-primary);
-      box-shadow: 0 0 0 4px rgba(94,188,96,0.1);
-      flex: 0 0 auto;
-    }
-
-    .trust-note {
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      color: var(--color-text-muted);
-      font-size: 0.92rem;
-      line-height: 1.68;
-    }
-
-    .form-progress-wrap {
-      display: grid;
-      gap: 8px;
       margin-bottom: 22px;
-    }
-
-    .progress-bar {
-      height: 10px;
-      border-radius: 999px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .progress-fill {
-      width: 16.66%;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, rgba(94,188,96,0.75), rgba(94,188,96,1));
-      box-shadow: 0 0 24px rgba(94,188,96,0.25);
-      transition: width var(--transition-smooth);
-    }
-
-    .step-caption {
-      font-family: var(--font-mono);
-      font-size: 12px;
       color: var(--color-text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .form-card {
+    .terminal-metric {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      padding: 14px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .terminal-metric strong {
+      font-size: 1rem;
+    }
+
+    .terminal-metric span {
+      color: var(--color-primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.9rem;
+    }
+
+    .white-band {
+      background: #f6f2ea;
+      color: #101522;
+    }
+
+    .white-band .section-lead,
+    .white-band .feature-text,
+    .white-band p {
+      color: #3d4758;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(36px, 7vw, 92px);
+      align-items: center;
+    }
+
+    .signature-card {
       position: relative;
-      border-radius: 24px;
-      padding: 30px;
+      padding: clamp(28px, 4vw, 48px);
+      border-radius: 34px;
+      color: var(--color-text);
+      background: #0a0f1e;
+      box-shadow: 0 30px 90px rgba(14, 21, 35, 0.22);
       overflow: hidden;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
     }
 
-    .form-step {
+    .signature-card::before {
+      content: "";
+      position: absolute;
+      top: -25%;
+      right: -15%;
+      width: 260px;
+      height: 260px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.20);
+      filter: blur(24px);
+    }
+
+    .signature-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .signature-card .label {
+      color: var(--color-primary);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .signature-card h3 {
+      margin: 16px 0 18px;
+      font-size: clamp(1.9rem, 3.2vw, 3.25rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.04;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .focus-list li {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 12px;
+      align-items: start;
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+      line-height: 1.5;
+    }
+
+    .focus-list li::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      margin-top: 7px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+      box-shadow: 0 0 18px rgba(94, 188, 96, 0.35);
+    }
+
+    .focus-note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(245, 158, 11, 0.14);
+      background: rgba(245, 158, 11, 0.08);
+      color: var(--color-text);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 46px;
+    }
+
+    .problem-card,
+    .solution-row,
+    .step-card,
+    .form-shell,
+    .contact-card {
+      border: 1px solid var(--color-line);
+      background: rgba(255, 255, 255, 0.045);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(18px);
+    }
+
+    .problem-card {
+      min-height: 260px;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      transition: transform var(--transition), border-color var(--transition);
+    }
+
+    .problem-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(94, 188, 96, 0.45);
+    }
+
+    .problem-card .tag,
+    .solution-label,
+    .step-card .tag {
+      display: inline-flex;
+      margin-bottom: 18px;
+      color: var(--color-accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .problem-card h3 {
+      margin-bottom: 16px;
+      font-size: clamp(1.35rem, 2vw, 1.82rem);
+      line-height: 1.08;
+      font-weight: 800;
+      text-transform: none;
+    }
+
+    .problem-card p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+
+    .solutions {
+      overflow: hidden;
+    }
+
+    .solutions::before {
+      content: "ITER";
+      position: absolute;
+      top: 34px;
+      right: -12px;
+      color: rgba(245, 158, 11, 0.07);
+      font-family: "Archivo", sans-serif;
+      font-size: clamp(9rem, 21vw, 23rem);
+      font-weight: 900;
+      letter-spacing: -0.08em;
+      line-height: 0.8;
+      pointer-events: none;
+    }
+
+    .solution-list {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 14px;
+      margin-top: 46px;
+    }
+
+    .solution-row {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items: start;
+      padding: clamp(22px, 3vw, 34px);
+      border-radius: 24px;
+    }
+
+    .solution-row h3 {
+      margin: 0;
+      font-size: clamp(1.25rem, 1.8vw, 1.72rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.1;
+    }
+
+    .solution-row p {
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: 1.03rem;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 44px;
+    }
+
+    .step-card {
+      position: relative;
+      min-height: 300px;
+      padding: 30px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .step-card::after {
+      content: "";
+      position: absolute;
+      left: 30px;
+      right: 30px;
+      bottom: 0;
+      height: 5px;
+      border-radius: 999px 999px 0 0;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    }
+
+    .step-card h3 {
+      margin-bottom: 16px;
+      font-size: clamp(1.35rem, 2.1vw, 1.95rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.08;
+    }
+
+    .step-card p {
+      color: var(--color-text-muted);
+    }
+
+    .cta-band {
+      background:
+        linear-gradient(135deg, rgba(245, 158, 11, 0.98), rgba(222, 115, 5, 0.98)),
+        var(--color-accent);
+      color: #111723;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: clamp(28px, 5vw, 70px);
+      align-items: stretch;
+    }
+
+    .cta-card {
+      padding: clamp(30px, 4vw, 52px);
+      border-radius: 30px;
+      background: #fffaf1;
+      box-shadow: 0 28px 70px rgba(52, 26, 0, 0.20);
+    }
+
+    .cta-card h2 {
+      margin-bottom: 18px;
+      color: #111723;
+      font-size: clamp(2rem, 4.2vw, 4.2rem);
+      font-weight: 800;
+      text-transform: none;
+      line-height: 1.03;
+    }
+
+    .cta-card p {
+      color: #3d3020;
+      font-size: 1.08rem;
+    }
+
+    .form-shell {
+      padding: clamp(24px, 4vw, 42px);
+      border-radius: 30px;
+      color: var(--color-text);
+      background: #0a0f1e;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.30);
+    }
+
+    .form-shell::before {
+      content: "";
+      display: block;
+      height: 1px;
+      margin-bottom: 18px;
+      background: linear-gradient(90deg, transparent, rgba(94, 188, 96, 0.55), transparent);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--color-text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      min-height: 54px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 14px;
+      outline: none;
+      padding: 14px 15px;
+      color: var(--color-text);
+      background: rgba(255, 255, 255, 0.06);
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form-field textarea {
+      min-height: 112px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 4px rgba(94, 188, 96, 0.12);
+    }
+
+    .form-field select option {
+      color: #111723;
+      background: #ffffff;
+    }
+
+    .form-consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 18px 0;
+      color: var(--color-text-muted);
+      font-size: 0.92rem;
+    }
+
+    .form-consent input {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--color-primary);
+    }
+
+    .form-progress {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .form-progress-track {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .form-progress-fill {
+      width: 16.6%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      transition: width 0.35s ease;
+    }
+
+    .form-progress-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--color-text-muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .step-panel {
       display: none;
-      animation: stepIn 0.45s ease;
+      animation: step-in 0.35s ease;
     }
 
-    .form-step.active {
+    .step-panel.is-active {
       display: block;
     }
 
-    .form-step.active.enter-next {
-      animation: stepInRight 0.45s ease;
+    @keyframes step-in {
+      from {
+        opacity: 0;
+        transform: translateX(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    .form-step.active.enter-prev {
-      animation: stepInLeft 0.45s ease;
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(6px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(4px); }
+    }
+
+    .step-panel.is-shaking {
+      animation: shake 0.35s ease;
     }
 
     .step-title {
-      font-family: var(--font-sans);
-      font-size: clamp(1.18rem, 2vw, 1.72rem);
-      line-height: 1.22;
-      letter-spacing: -0.03em;
-      font-weight: 700;
-      margin-bottom: 18px;
-      max-width: 32rem;
+      margin: 0 0 16px;
+      font-size: clamp(1.35rem, 2.1vw, 1.95rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      text-transform: none;
     }
 
     .choice-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .choice-grid.grid-3 {
+    .choice-grid.is-wide {
       grid-template-columns: 1fr;
     }
 
-    .choice-card {
-      position: relative;
-      min-height: 64px;
-      padding: 16px 18px 16px 52px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.07);
-      background: rgba(255,255,255,0.025);
-      display: flex;
-      align-items: center;
-      gap: 12px;
+    .choice-button {
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      padding: 16px 8px 16px 40px;
+      color: var(--color-text);
+      background: transparent;
       cursor: pointer;
-      transition: transform var(--transition), border-color var(--transition), background var(--transition), box-shadow var(--transition), color var(--transition);
       text-align: left;
-      overflow: hidden;
+      position: relative;
+      transition: background var(--transition), border-color var(--transition), color var(--transition);
     }
 
-    .choice-card:hover {
-      transform: translateY(-1px);
-      border-color: rgba(94,188,96,0.26);
-      box-shadow: none;
-    }
-
-    .choice-card.selected {
-      border-color: rgba(94,188,96,0.7);
-      background: rgba(94,188,96,0.1);
-      box-shadow: 0 0 0 1px rgba(94,188,96,0.16) inset;
-    }
-
-    .choice-card::before {
+    .choice-button::before {
       content: "";
       position: absolute;
-      left: 18px;
+      left: 10px;
       top: 50%;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 1px solid rgba(138,155,184,0.55);
-      background: rgba(255,255,255,0.04);
-      box-shadow:
-        inset 0 1px 1px rgba(255,255,255,0.06),
-        0 0 0 0 rgba(94,188,96,0);
-      transform: translateY(-50%);
-      transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
-    }
-
-    .choice-card.selected::before {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-      box-shadow: 0 0 0 4px rgba(94,188,96,0.12);
-    }
-
-    .choice-card.shake {
-      animation: shake 0.4s ease;
-    }
-
-    .choice-icon {
-      display: none;
-    }
-
-    .choice-content {
-      display: grid;
-      gap: 4px;
-      min-width: 0;
-    }
-
-    .choice-content strong {
-      font-family: var(--font-sans);
-      font-size: 0.98rem;
-      line-height: 1.35;
-      letter-spacing: -0.02em;
-      font-weight: 500;
-    }
-
-    .choice-content span {
-      font-size: 0.9rem;
-      color: var(--color-text-muted);
-    }
-
-    .priority-card {
-      border: 1px solid rgba(245,158,11,0.18);
-    }
-
-    .priority-card strong {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .priority-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 5px 9px;
+      width: 12px;
+      height: 12px;
       border-radius: 999px;
-      background: rgba(245,158,11,0.15);
-      border: 1px solid rgba(245,158,11,0.28);
-      color: var(--color-accent);
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      letter-spacing: 0.14em;
+      border: 2px solid rgba(158, 176, 204, 0.68);
+      transform: translateY(-50%);
+      transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
     }
 
-    .priority-card.high.selected {
-      border-color: rgba(245,158,11,0.82);
-      box-shadow: 0 0 0 1px rgba(245,158,11,0.18) inset, 0 0 0 8px rgba(245,158,11,0.08);
+    .choice-button:hover {
+      background: rgba(255, 255, 255, 0.03);
     }
 
-    .form-fields {
-      display: grid;
-      gap: 14px;
-    }
-
-    .field {
-      display: grid;
-      gap: 8px;
-    }
-
-    .field label {
-      font-size: 0.92rem;
-      font-family: var(--font-sans);
+    .choice-button.is-selected {
       color: var(--color-text);
+      background: rgba(94, 188, 96, 0.08);
     }
 
-    .field input {
-      width: 100%;
-      min-height: 52px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.09);
-      background: rgba(255,255,255,0.03);
-      color: var(--color-text);
-      outline: none;
-      transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+    .choice-button.is-selected::before {
+      border-color: var(--color-primary);
+      background: var(--color-primary);
+      box-shadow: 0 0 0 4px rgba(94, 188, 96, 0.10);
     }
 
-    .field input::placeholder {
-      color: rgba(138,155,184,0.7);
+    .choice-button strong {
+      display: block;
+      font-size: 0.96rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
-    .field input:focus {
-      border-color: rgba(94,188,96,0.78);
-      box-shadow: 0 0 0 4px rgba(94,188,96,0.12);
-      background: rgba(255,255,255,0.05);
-    }
-
-    .checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: var(--color-text-muted);
-      font-family: var(--font-sans);
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .checkbox input {
+    .choice-button span {
+      display: block;
       margin-top: 4px;
-      accent-color: var(--color-primary);
+      color: var(--color-text-muted);
+      font-size: 0.82rem;
+      line-height: 1.3;
     }
 
-    .form-nav {
+    .step-actions {
       display: flex;
-      align-items: center;
+      gap: 12px;
       justify-content: space-between;
-      gap: 14px;
-      margin-top: 22px;
-      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .step-actions .button {
+      width: auto;
+      min-width: 160px;
     }
 
     .form-message {
-      min-height: 24px;
-      margin-top: 14px;
-      font-size: 0.95rem;
-      color: var(--color-accent);
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    .success-card {
       display: none;
-      text-align: center;
-      padding: 28px;
-      border-radius: 24px;
-      grid-column: 1 / -1;
-      background: rgba(255,255,255,0.035);
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid rgba(94, 188, 96, 0.36);
+      border-radius: 16px;
+      color: #dfffe5;
+      background: rgba(94, 188, 96, 0.10);
     }
 
-    .success-card.visible {
-      display: grid;
-      gap: 16px;
-      justify-items: center;
-      animation: fadeIn 0.6s ease;
+    .form-message.is-warning {
+      border-color: rgba(245, 158, 11, 0.35);
+      color: #fff0cf;
+      background: rgba(245, 158, 11, 0.10);
     }
 
-    .success-card h3 {
-      font-family: var(--font-sans);
-      line-height: 1.2;
-      letter-spacing: -0.03em;
+    .form-message.visible {
+      display: block;
     }
 
-    .success-card p {
-      max-width: 34rem;
-      line-height: 1.7;
-    }
-
-    .contact-whatsapp {
-      display: flex;
-      justify-content: center;
-      margin-top: 28px;
-    }
-
-    .contact-whatsapp .quick-action {
-      width: min(100%, 320px);
-      animation: whatsappPulse 2.2s ease-in-out infinite;
-    }
-
-    .success-mark {
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      display: inline-flex;
+    .qualification-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
       align-items: center;
       justify-content: center;
-      color: var(--color-primary);
-      background: rgba(94,188,96,0.08);
-      border: 1px solid rgba(94,188,96,0.22);
-      box-shadow: 0 0 40px rgba(94,188,96,0.16);
+      padding: 24px;
+      background: rgba(3, 6, 12, 0.72);
+      backdrop-filter: blur(12px);
     }
 
-    /* Contact */
-    #contato {
-      background: transparent;
+    .qualification-modal.is-open {
+      display: flex;
+    }
+
+    .qualification-dialog {
+      position: relative;
+      width: min(100%, 680px);
+      border: 1px solid rgba(94, 188, 96, 0.18);
+      border-radius: 30px;
+      padding: 34px 34px 32px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(245, 158, 11, 0.18), transparent 22%),
+        radial-gradient(circle at 12% 0%, rgba(94, 188, 96, 0.14), transparent 24%),
+        radial-gradient(circle at 100% 100%, rgba(94, 188, 96, 0.10), transparent 20%),
+        linear-gradient(180deg, rgba(13, 20, 34, 0.98), rgba(9, 14, 25, 0.98));
+      box-shadow:
+        0 34px 120px rgba(0, 0, 0, 0.60),
+        0 0 0 1px rgba(245, 158, 11, 0.04) inset,
+        0 0 60px rgba(94, 188, 96, 0.08);
+      overflow: hidden;
+      transform: translateY(10px) scale(0.98);
+      animation: modal-pop 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes modal-pop {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .qualification-dialog::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.55), rgba(94, 188, 96, 0.18), transparent 60%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .qualification-dialog::after {
+      content: "";
+      position: absolute;
+      right: -48px;
+      bottom: -56px;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.22), rgba(94, 188, 96, 0.12) 46%, transparent 72%);
+      filter: blur(8px);
+      pointer-events: none;
+    }
+
+    .qualification-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(94, 188, 96, 0.18);
+      border-radius: 999px;
+      color: var(--color-text);
+      background: rgba(255, 255, 255, 0.04);
+      cursor: pointer;
+      font-size: 1.3rem;
+      line-height: 1;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.06) inset, 0 12px 32px rgba(0, 0, 0, 0.22);
+    }
+
+    .qualification-dialog h2 {
+      margin: 0;
+      max-width: 30ch;
+      font-size: clamp(1.35rem, 2.05vw, 1.85rem);
+      line-height: 1.12;
+      text-transform: none;
+      letter-spacing: -0.035em;
+    }
+
+    .qualification-dialog p {
+      margin-bottom: 0;
+      color: var(--color-text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: start;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: clamp(30px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .contact-card {
+      padding: clamp(28px, 4vw, 48px);
+      border-radius: var(--radius-lg);
     }
 
     .contact-list {
-      margin-top: 24px;
       display: grid;
-      gap: 14px;
+      gap: 18px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
     }
 
-    .contact-item {
+    .contact-list a,
+    .contact-list span {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 15px 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--color-text);
-      transition: transform var(--transition), border-color var(--transition);
+      color: var(--color-text-muted);
+      font-size: 1.08rem;
     }
 
-    .contact-item:hover {
-      transform: translateY(-2px);
-      border-color: rgba(94,188,96,0.28);
-    }
-
-    .contact-item svg {
-      width: 18px;
-      height: 18px;
-      color: var(--color-primary);
+    .contact-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      box-shadow: 0 0 20px var(--color-primary);
       flex: 0 0 auto;
     }
 
-    .quick-card {
-      border-radius: 24px;
-      padding: 24px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .quick-actions {
-      display: grid;
-      gap: 12px;
-    }
-
-    .quick-action {
-      min-height: 52px;
-      padding: 14px 16px;
-      border-radius: 14px;
+    .whatsapp-center {
       display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 12px;
-      font-weight: 700;
-      transition: transform var(--transition), box-shadow var(--transition);
+      margin-top: 34px;
     }
 
-    .quick-action:hover {
-      transform: translateY(-2px);
+    .whatsapp-pulse {
+      min-width: min(100%, 330px);
+      color: #07101e;
+      background: #25d366;
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.48);
+      animation: pulse-whatsapp 1.8s infinite;
     }
 
-    .wa {
-      background: #25D366;
-      color: #08120b;
+    @keyframes pulse-whatsapp {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.48); }
+      70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
     }
 
-    .ig {
-      color: #fff;
-      background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-    }
-
-    .mail {
-      background: rgba(255,255,255,0.03);
-      color: var(--color-text);
-      border: 1px solid rgba(94,188,96,0.28);
-    }
-
-    .quick-action svg {
-      width: 18px;
-      height: 18px;
-    }
-
-    /* Footer */
-    footer {
-      background: transparent;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding: 46px 0 30px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .footer-links,
-    .footer-contact {
-      display: grid;
-      gap: 10px;
+    .footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--color-line);
+      background: #050914;
       color: var(--color-text-muted);
     }
 
-    .footer-links a:hover,
-    .footer-contact a:hover {
-      color: var(--color-text);
-    }
-
-    .footer-line {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-      margin: 28px 0 18px;
-    }
-
-    .footer-bottom {
+    .footer-inner {
       display: flex;
+      gap: 20px;
+      align-items: center;
       justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      color: var(--color-text-muted);
       font-size: 0.9rem;
     }
 
-    /* SVG utility */
-    .icon {
-      display: block;
-      width: 100%;
-      height: 100%;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .footer strong {
+      color: var(--color-text);
     }
 
-    /* Animations */
-    @keyframes revealUp {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-18px); }
-    }
-
-    @keyframes floatOrb {
-      0%, 100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.72; }
-      50% { transform: translate3d(0, -18px, 0) scale(1.06); opacity: 0.96; }
-    }
-
-    @keyframes stepIn {
-      from { opacity: 0; transform: translateX(22px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes stepInRight {
-      from { opacity: 0; transform: translateX(26px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes stepInLeft {
-      from { opacity: 0; transform: translateX(-26px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20% { transform: translateX(-7px); }
-      40% { transform: translateX(7px); }
-      60% { transform: translateX(-4px); }
-      80% { transform: translateX(4px); }
-    }
-
-    @keyframes whatsappPulse {
-      0%, 100% {
-        transform: translateY(0) scale(1);
-        box-shadow: 0 0 0 0 rgba(37,211,102,0.28);
-      }
-      50% {
-        transform: translateY(-1px) scale(1.02);
-        box-shadow: 0 0 0 10px rgba(37,211,102,0);
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-
-    html.performance-mode body::before {
-      opacity: 0.04;
-    }
-
-    html.performance-mode .glass,
-    html.performance-mode .visual-card,
-    html.performance-mode .number-card,
-    html.performance-mode .service-card,
-    html.performance-mode .differential,
-    html.performance-mode .quick-card,
-    html.performance-mode .form-shell,
-    html.performance-mode .form-card {
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-    }
-
-    html.performance-mode .hero-orb,
-    html.performance-mode .floating-number {
-      display: none !important;
-    }
-
-    html.performance-mode #hero::before {
-      opacity: 0.16;
-      background-size: 140px 140px;
-    }
-
-    html.performance-mode .animate-hidden,
-    html.performance-mode .hero-title .line span,
-    html.performance-mode .hero-subtitle,
-    html.performance-mode .hero-actions {
-      opacity: 1 !important;
-      transform: none !important;
-      animation: none !important;
-      transition: none !important;
-    }
-
-    html.performance-mode .service-card::before {
-      opacity: 0.45;
-    }
-
-    html.performance-mode .choice-card.selected,
-    html.performance-mode .priority-card.high.selected {
-      box-shadow: 0 0 0 1px rgba(94,188,96,0.14) inset;
-    }
-
-    html.performance-mode .hero-copy {
-      padding-top: 12px;
-    }
-
-    html.performance-mode .hero-layout {
-      gap: 24px;
-    }
-
-    html.performance-mode .service-card,
-    html.performance-mode .number-card,
-    html.performance-mode .differential {
-      transform: none !important;
-    }
-
-    html.performance-mode .service-card:hover,
-    html.performance-mode .number-card:hover,
-    html.performance-mode .choice-card:hover,
-    html.performance-mode .contact-item:hover,
-    html.performance-mode .btn:hover {
-      transform: none !important;
-    }
-
-    html.performance-mode .choice-card.shake {
-      animation: none;
-    }
-
-    html.performance-mode .form-shell::before {
-      opacity: 0.25;
-    }
-
-    /* Responsive */
-    @media (max-width: 1200px) {
+    @media (max-width: 1040px) {
       .hero-layout,
-      .split-layout,
-      .contact-layout,
-      .form-shell {
+      .intro-grid,
+      .cta-grid,
+      .contact-layout {
         grid-template-columns: 1fr;
       }
 
-      .hero-copy {
-        max-width: 48rem;
+      .hero-panel {
+        min-height: 470px;
       }
 
-      .numbers-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .panel-content {
+        min-height: 470px;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .form-side {
-        order: -1;
+      .problem-grid,
+      .method-grid {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 768px) {
-      .section {
-        padding: 88px 0;
+      .container {
+        width: min(100% - 28px, var(--max-width));
       }
 
-      #hero {
-        min-height: auto;
-        padding-top: 112px;
-        padding-bottom: 72px;
+      .header-inner {
+        min-height: 72px;
       }
 
-      .services-grid,
-      .numbers-grid,
-      .choice-grid,
-      .choice-grid.grid-3 {
+      .header-inner .button {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 98px;
+      }
+
+      .display-title {
+        font-size: clamp(2.7rem, 10vw, 4.75rem);
+      }
+
+      .section-title {
+        font-size: clamp(2.15rem, 8.5vw, 3.8rem);
+      }
+
+      .hero-proof,
+      .solution-row,
+      .form-grid {
         grid-template-columns: 1fr;
       }
 
-      .choice-card {
-        min-height: 60px;
-        padding-left: 48px;
+      .hero-actions .button {
+        width: 100%;
       }
 
-      .differential {
-        grid-template-columns: 1fr;
-        gap: 18px;
+      .hero-panel {
+        min-height: 390px;
+        border-radius: 28px;
       }
 
-      .differential:nth-child(even) .diff-copy,
-      .differential:nth-child(even) .diff-icon {
-        order: initial;
+      .panel-content {
+        min-height: 390px;
+        padding: 18px;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .terminal-card {
+        padding: 18px;
       }
 
-      .form-shell {
-        gap: 18px;
-      }
-
-      .form-side {
-        padding: 20px;
-      }
-
-      .form-card {
-        padding: 20px;
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
 
     @media (max-width: 480px) {
-      .container {
-        width: min(100% - 22px, var(--container));
+      .section {
+        padding: 62px 0;
       }
 
-      .nav {
-        min-height: 76px;
+      .display-title {
+        font-size: clamp(2.45rem, 11vw, 3.85rem);
       }
 
-      .brand strong {
-        font-size: 1.25rem;
+      .section-title {
+        font-size: clamp(2rem, 9.2vw, 3.15rem);
       }
 
-      h1 {
-        font-size: clamp(2.8rem, 16vw, 4.2rem);
-      }
-
-      h2 {
-        font-size: clamp(1.9rem, 11vw, 2.6rem);
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
+      .button {
         width: 100%;
+        padding-inline: 18px;
       }
+    }
 
-      .visual-card,
-      .number-card,
-      .service-card,
-      .differential,
-      .quick-card {
-        padding: 20px;
-      }
-
-      .form-shell {
-        padding: 0;
-      }
-
-      .form-card {
-        padding: 18px;
-      }
-
-      .choice-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-item {
-        align-items: flex-start;
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 <body>
-  <svg class="sr-only" aria-hidden="true" focusable="false">
-    <symbol id="icon-arrow" viewBox="0 0 24 24">
-      <path d="M5 12h14"></path>
-      <path d="M13 5l7 7-7 7"></path>
-    </symbol>
-    <symbol id="icon-menu" viewBox="0 0 24 24">
-      <path d="M4 7h16"></path>
-      <path d="M4 12h16"></path>
-      <path d="M4 17h16"></path>
-    </symbol>
-    <symbol id="icon-close" viewBox="0 0 24 24">
-      <path d="M6 6l12 12"></path>
-      <path d="M18 6L6 18"></path>
-    </symbol>
-    <symbol id="icon-compass" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="8"></circle>
-      <path d="M14.6 9.4l-1.6 4.2-4.2 1.6 1.6-4.2 4.2-1.6z"></path>
-      <path d="M12 4v3"></path>
-      <path d="M20 12h-3"></path>
-      <path d="M12 20v-3"></path>
-      <path d="M4 12h3"></path>
-    </symbol>
-    <symbol id="icon-chart" viewBox="0 0 24 24">
-      <path d="M4 19h16"></path>
-      <path d="M6 17V9"></path>
-      <path d="M11 17V5"></path>
-      <path d="M16 17v-6"></path>
-    </symbol>
-    <symbol id="icon-portfolio" viewBox="0 0 24 24">
-      <path d="M4 8h16"></path>
-      <path d="M5 8l2-3h10l2 3"></path>
-      <rect x="4" y="8" width="16" height="12" rx="2"></rect>
-      <path d="M9 12h6"></path>
-    </symbol>
-    <symbol id="icon-shield" viewBox="0 0 24 24">
-      <path d="M12 3l7 3v5c0 5-3.2 8.7-7 10-3.8-1.3-7-5-7-10V6l7-3z"></path>
-      <path d="M9.2 12.2l1.8 1.8 3.8-4"></path>
-    </symbol>
-    <symbol id="icon-heart" viewBox="0 0 24 24">
-      <path d="M20.5 8.7a4.8 4.8 0 0 0-8.5-3 4.8 4.8 0 0 0-8.5 3c0 6 8.5 11.3 8.5 11.3S20.5 14.7 20.5 8.7z"></path>
-      <path d="M7.5 11.5h3l1.2-2.2 1.8 4.4 1.1-2.2h3"></path>
-    </symbol>
-    <symbol id="icon-structure" viewBox="0 0 24 24">
-      <path d="M4 7h5v5H4z"></path>
-      <path d="M15 4h5v5h-5z"></path>
-      <path d="M15 15h5v5h-5z"></path>
-      <path d="M9 9l6-2"></path>
-      <path d="M9 12l6 5"></path>
-    </symbol>
-    <symbol id="icon-orbit" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="3"></circle>
-      <path d="M4.5 12c0-4.1 3.4-7.5 7.5-7.5S19.5 7.9 19.5 12 16.1 19.5 12 19.5 4.5 16.1 4.5 12z"></path>
-      <path d="M7.5 6.5c2 1 4.7 2.7 6.8 4.8 2.1 2.1 3.8 4.8 4.8 6.8"></path>
-    </symbol>
-    <symbol id="icon-fingerprint" viewBox="0 0 24 24">
-      <path d="M12 5c3.7 0 7 3.1 7 7 0 4.9-2 7.5-2 7.5"></path>
-      <path d="M5 12c0-3.7 3.1-7 7-7"></path>
-      <path d="M8.2 12.5c0-2.4 1.8-4.5 3.8-4.5 2.2 0 3.4 1.8 3.4 3.7 0 4.3-1.5 6.3-1.5 6.3"></path>
-      <path d="M9.5 16.7c.4-1.7.8-3.1.8-4.7"></path>
-    </symbol>
-    <symbol id="icon-eye" viewBox="0 0 24 24">
-      <path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"></path>
-      <circle cx="12" cy="12" r="2.5"></circle>
-    </symbol>
-    <symbol id="icon-scale" viewBox="0 0 24 24">
-      <path d="M12 4v16"></path>
-      <path d="M6 8h12"></path>
-      <path d="M8 8l-3 6h6l-3-6z"></path>
-      <path d="M16 8l-3 6h6l-3-6z"></path>
-      <path d="M5 20h14"></path>
-    </symbol>
-    <symbol id="icon-horizon" viewBox="0 0 24 24">
-      <path d="M4 16c2-4 4.5-6 8-6s6 2 8 6"></path>
-      <path d="M4 20h16"></path>
-      <path d="M12 6v4"></path>
-    </symbol>
-    <symbol id="icon-medical" viewBox="0 0 24 24">
-      <path d="M9 4h6v4h4v6h-4v6H9v-6H5V8h4z"></path>
-    </symbol>
-    <symbol id="icon-health" viewBox="0 0 24 24">
-      <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"></path>
-    </symbol>
-    <symbol id="icon-business" viewBox="0 0 24 24">
-      <rect x="4" y="7" width="16" height="13" rx="2"></rect>
-      <path d="M8 7V5h8v2"></path>
-      <path d="M4 12h16"></path>
-    </symbol>
-    <symbol id="icon-person" viewBox="0 0 24 24">
-      <circle cx="12" cy="8" r="3.5"></circle>
-      <path d="M5 20c1.8-4 4.8-6 7-6s5.2 2 7 6"></path>
-    </symbol>
-    <symbol id="icon-chains" viewBox="0 0 24 24">
-      <path d="M9.5 14.5l5-5"></path>
-      <path d="M7 7h4v4H7z"></path>
-      <path d="M13 13h4v4h-4z"></path>
-      <path d="M5 19c-1.7-1.7-1.7-4.4 0-6.1l2.1-2.1"></path>
-      <path d="M19 5c1.7 1.7 1.7 4.4 0 6.1l-2.1 2.1"></path>
-    </symbol>
-    <symbol id="icon-flow" viewBox="0 0 24 24">
-      <path d="M4 8h8a4 4 0 0 1 4 4v0a4 4 0 0 0 4 4h0"></path>
-      <path d="M16 4l4 4-4 4"></path>
-      <path d="M16 20l4-4-4-4"></path>
-    </symbol>
-    <symbol id="icon-star" viewBox="0 0 24 24">
-      <path d="M12 4.5l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 18.3 6.6 21.3l1-6.1-4.4-4.3 6.1-.9L12 4.5z"></path>
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24">
-      <path d="M20 6L9 17l-5-5"></path>
-    </symbol>
-    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
-      <path d="M20.5 11.9a8.5 8.5 0 0 1-12.7 7.4L3.5 20l.8-4.1A8.5 8.5 0 1 1 20.5 11.9z"></path>
-      <path d="M9 8.8c.2-.5.5-.6.8-.6h.6c.2 0 .5.2.6.6l.7 1.6c.1.3.1.5-.1.8l-.5.6c-.2.2-.2.5 0 .8.4.7 1.3 1.6 2 2 .3.2.6.2.8 0l.6-.5c.3-.2.5-.2.8-.1l1.6.7c.4.1.6.4.6.6v.6c0 .3-.1.6-.6.8-.6.3-1.5.5-2.6.2-2.8-.8-5.1-3.1-5.9-5.9-.3-1.1-.1-2 .2-2.6z"></path>
-    </symbol>
-    <symbol id="icon-mail" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
-      <path d="M4 7l8 6 8-6"></path>
-    </symbol>
-  </svg>
-
-  <header class="header" id="header">
-    <div class="container">
-      <nav class="nav" role="navigation" aria-label="Principal">
-        <a href="#hero" class="brand" aria-label="Ir para o topo">
-          <strong>ITER</strong>
-          <span>EFICIÊNCIA FINANCEIRA</span>
-        </a>
-      </nav>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="logo" href="#topo" aria-label="Voltar ao início">
+        <strong>ITER</strong>
+        <span>Eficiência Financeira</span>
+      </a>
+      <a class="button button-green" href="#formulario">Falar no WhatsApp</a>
     </div>
   </header>
 
   <main>
-    <section id="hero">
-      <div class="hero-orb one"></div>
-      <div class="hero-orb two"></div>
-      <div class="hero-orb three"></div>
-      <div class="floating-number a">+127%</div>
-      <div class="floating-number b">R$2.4M</div>
-      <div class="floating-number c">AAA</div>
-      <div class="floating-number d">360°</div>
+    <section class="section hero" aria-labelledby="hero-title">
       <div class="container hero-layout">
         <div class="hero-copy animate-hidden">
-          <h1 class="hero-title">
-            <span class="line"><span>Transforme</span></span>
-            <span class="line"><span>Suas Finanças.</span></span>
-            <span class="line"><span>Construa Seu</span></span>
-            <span class="line"><span class="accent">Legado.</span></span>
-          </h1>
-          <p class="hero-subtitle">
-            A ITER é uma consultoria especializada em soluções financeiras completas e integradas. Com transparência, estratégia e visão de longo prazo, ajudamos você a alcançar a liberdade financeira que sempre desejou.
-          </p>
+          <div class="hero-kicker"><span></span> Consultoria financeira para decisões sérias</div>
+          <h1 class="display-title" id="hero-title">Pare de perder dinheiro por falta de estratégia.</h1>
+          <p class="hero-lead">A ITER organiza sua vida financeira, protege seu patrimônio e transforma decisões soltas em uma rota clara de crescimento, segurança e liberdade.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#formulario">Falar com um especialista <svg class="icon" aria-hidden="true" style="width:18px;height:18px;"><use href="#icon-arrow"></use></svg></a>
-            <a class="btn btn-ghost" href="#sobre">Conhecer a ITER</a>
+            <a class="button" href="#formulario">Solicitar análise gratuita →</a>
+            <a class="button button-ghost" href="https://wa.me/5521971110685" target="_blank" rel="noopener noreferrer">Conversar com especialista</a>
+          </div>
+          <div class="hero-proof" aria-label="Credenciais da ITER">
+            <div class="proof-pill"><strong>+10 anos</strong><span>de experiência consultiva</span></div>
+            <div class="proof-pill"><strong>360°</strong><span>planejamento financeiro integrado</span></div>
+            <div class="proof-pill"><strong>Alta clareza</strong><span>decisões com método e acompanhamento</span></div>
           </div>
         </div>
-        <div class="hero-side animate-hidden stagger-2">
-          <div class="glass" style="border-radius:28px;padding:26px; position:relative; overflow:hidden;">
-            <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:20px;">
-              <div>
-                <h3 class="hero-side-title">Estratégia financeira com clareza, precisão e visão de longo prazo.</h3>
+
+        <aside class="hero-panel animate-hidden" aria-label="Painel de diagnóstico financeiro">
+          <div class="panel-content">
+            <div class="terminal-card">
+              <div class="terminal-top">
+                <span>Diagnóstico ITER</span>
+                <span>Confidencial</span>
               </div>
-              <div class="compass-wrap" aria-hidden="true">
-                <svg class="icon" style="width:36px;height:36px;"><use href="#icon-compass"></use></svg>
+              <div class="terminal-metric">
+                <strong>Fluxo de caixa sem controle</strong>
+                <span>risco alto</span>
+              </div>
+              <div class="terminal-metric">
+                <strong>Investimentos sem estratégia</strong>
+                <span>ajustável</span>
+              </div>
+              <div class="terminal-metric">
+                <strong>Proteção familiar e patrimonial</strong>
+                <span>prioridade</span>
+              </div>
+              <div class="terminal-metric">
+                <strong>Plano de longo prazo</strong>
+                <span>ITER</span>
               </div>
             </div>
-            <p style="max-width:none; color:var(--color-text-muted); line-height:1.8;">Uma abordagem consultiva para organizar decisões, proteger patrimônio e construir um caminho financeiro sólido, sem excesso de ruído ou complexidade.</p>
-            <div class="glass" style="margin-top:18px;padding:18px;border-radius:18px; background:rgba(255,255,255,0.03);">
-              <div class="eyebrow" style="margin-bottom:10px; font-size:11px;">ATENDIMENTO PERSONALIZADO</div>
-              <p style="color:var(--color-text); max-width:none; line-height:1.8;">Cada conversa começa entendendo seu momento atual, seus objetivos e o tipo de apoio que faz mais sentido para você.</p>
-            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="eficiencia" aria-labelledby="eficiencia-title">
+      <div class="container efficiency-layout">
+        <div class="efficiency-copy animate-hidden">
+          <div class="efficiency-kicker">Eficiência financeira ITER</div>
+          <h2 id="eficiencia-title">Eficiência financeira é transformar renda em direção, não em improviso.</h2>
+          <p>A ITER entra quando você já percebeu que trabalhar muito não basta. O que faltava era método para organizar o caixa, proteger o patrimônio e fazer cada decisão financeira puxar a próxima.</p>
+          <div class="efficiency-points">
+            <div class="efficiency-point">Cortar vazamentos silenciosos que drenam dinheiro e energia.</div>
+            <div class="efficiency-point">Estruturar decisões para parar de depender de tentativa e erro.</div>
+            <div class="efficiency-point">Criar uma estratégia clara para crescer com segurança e previsibilidade.</div>
+          </div>
+          <div class="efficiency-tags">
+            <span class="efficiency-tag">Mais clareza</span>
+            <span class="efficiency-tag">Mais controle</span>
+            <span class="efficiency-tag">Mais proteção</span>
+            <span class="efficiency-tag">Mais conversão</span>
+          </div>
+          <div class="efficiency-note">A ITER não vende mais do mesmo. A ITER organiza o cenário e encurta o caminho entre o problema e a solução.</div>
+          <a class="button" href="#formulario">Quero minha análise agora →</a>
+        </div>
+
+        <div class="efficiency-panel animate-hidden" aria-label="Resumo do método ITER">
+          <div class="efficiency-stat accent">
+            <strong>Visão integrada</strong>
+            <span>Fluxo de caixa, investimentos, proteção e próximos passos analisados como um único sistema.</span>
+          </div>
+          <div class="efficiency-stat">
+            <strong>Decisão com pressão comercial</strong>
+            <span>Quem entra na ITER já entende que o objetivo é avançar para uma solução real, não para conversa infinita.</span>
+          </div>
+          <div class="efficiency-stat">
+            <strong>Venda certa para o perfil certo</strong>
+            <span>O questionário filtra e direciona o contato para quem está pronto para seguir adiante.</span>
+          </div>
+          <div class="efficiency-stat">
+            <strong>Execução guiada</strong>
+            <span>Você sai da triagem com uma leitura mais clara do que resolver primeiro para ganhar tempo e evitar erros caros.</span>
+          </div>
+          <div class="efficiency-stat accent">
+            <strong>Momento de agir</strong>
+            <span>Se o cenário já está claro, o próximo passo não é pensar mais. É preencher o formulário e avançar para o atendimento certo.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <div class="container split-layout">
-        <div class="copy-stack animate-hidden">
-          <div class="eyebrow">SOBRE A ITER</div>
-          <h2>A Rota para Sua <span class="accent">Liberdade Financeira</span></h2>
-          <p>Há mais de 10 anos, nossa consultoria se dedica a oferecer soluções completas e integradas para ajudar nossos clientes a alcançar seus objetivos financeiros com segurança e estratégia.</p>
-          <p>Nosso nome, Iter, que significa "rota" em latim, representa exatamente nosso propósito: ser um guia ao longo da sua jornada financeira, independentemente do ponto em que você está hoje.</p>
-          <p>Trabalhamos com soluções financeiras personalizadas e total transparência, ajudando cada cliente a tomar decisões bem informadas, proteger seu patrimônio e construir um caminho sólido para seus objetivos.</p>
+    <section class="section" id="formulario" aria-labelledby="focus-title">
+      <div class="container intro-grid" style="grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr); gap: 28px; align-items:start;">
+        <div class="signature-card animate-hidden" style="padding: 24px 28px; min-height: 100%;">
+          <span class="label">Foco total</span>
+          <h3 id="focus-title" style="margin-bottom: 14px;">Triagem direta para entender seu cenário.</h3>
+          <p style="margin-bottom: 0;">A proposta aqui é simples: responder rápido, qualificar o contato e seguir para a conversa certa, sem distrações desnecessárias.</p>
+          <ul class="focus-list">
+            <li>Você preenche o essencial e a ITER entende seu cenário sem enrolação.</li>
+            <li>As respostas ajudam a identificar o melhor caminho antes de qualquer contato.</li>
+            <li>Se fizer sentido, o próximo passo vira uma conversa objetiva e comercial.</li>
+          </ul>
+          <div class="focus-note">Quanto mais claro for o cenário, mais preciso será o retorno da ITER. É assim que a conversa avança com qualidade.</div>
         </div>
-        <div class="visual-card animate-hidden stagger-2">
-          <div class="mission">
-            <div class="compass-wrap" aria-hidden="true">
-              <svg class="icon" style="width:38px;height:38px;"><use href="#icon-compass"></use></svg>
-            </div>
-            <div>
-              <div class="label">Nossa Missão</div>
-              <h3>Guiar decisões financeiras com clareza, profundidade e personalização.</h3>
-            </div>
-            <div class="divider"></div>
-            <div>
-              <div class="label">Nossa Visão</div>
-              <p>Ser referência em consultoria financeira premium, entregando proteção patrimonial, inteligência estratégica e liberdade para escolhas mais conscientes.</p>
+        <form class="form-shell animate-hidden" id="leadForm" action="mailto:contato@itergrupo.net" method="post" enctype="text/plain" novalidate style="padding: 24px 24px 20px;">
+          <div class="form-progress">
+            <div class="form-progress-track"><div class="form-progress-fill" id="formProgressFill"></div></div>
+            <div class="form-progress-meta">
+              <span id="stepCounter">Passo 1 de 6</span>
+              <span id="stepHint">Profissão</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="servicos" class="section">
-      <div class="container">
-        <div class="services-head animate-hidden">
-          <div class="eyebrow">NOSSAS SOLUÇÕES</div>
-          <h2>Soluções Completas para Cada Etapa da Sua Jornada</h2>
-          <p>Integramos todas as dimensões do planejamento financeiro para construir estratégias consistentes e adaptadas à sua realidade.</p>
-        </div>
-        <div class="services-list">
-          <article class="service-item animate-hidden stagger-1">
-            <h3>Consultoria Financeira</h3>
-            <p>Planejamento estratégico completo integrando fluxo de caixa, investimentos, proteção patrimonial, tributação e sucessão. Com suporte de IA e app exclusivo.</p>
-          </article>
-          <article class="service-item animate-hidden stagger-2">
-            <h3>Investimentos e Patrimônio</h3>
-            <p>Consultoria CVM especializada na construção de carteiras alinhadas ao seu perfil de risco. Foco em transparência, longo prazo e wealth management.</p>
-          </article>
-          <article class="service-item animate-hidden stagger-3">
-            <h3>Proteção Financeira e Seguros</h3>
-            <p>Seguro de Vida, Responsabilidade Civil, Afastamento Temporário e Patrimonial. Análise completa para garantir que você está protegido contra os riscos que importam.</p>
-          </article>
-          <article class="service-item animate-hidden stagger-4">
-            <h3>Planos de Saúde</h3>
-            <p>Consultoria para análise e contratação de planos empresariais, individuais e seguro saúde internacional. Equilíbrio entre cobertura, rede e custo-benefício.</p>
-          </article>
-          <article class="service-item animate-hidden stagger-5">
-            <h3>Crédito e Estruturação</h3>
-            <p>Empréstimos, financiamentos, home equity, consórcio e câmbio. Assessoria para as melhores condições de taxas e estrutura financeira.</p>
-          </article>
-          <article class="service-item animate-hidden stagger-1">
-            <h3>Planejamento Sucessório</h3>
-            <p>Estruturas e recomendações para preservar patrimônio, organizar decisões e proteger famílias com visão de continuidade.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+          <div class="step-panel is-active" data-step="1">
+            <p class="eyebrow" style="margin-bottom: 12px;">Análise gratuita</p>
+            <h2 class="step-title">Qual é a sua profissão?</h2>
+            <div class="choice-grid">
+              <button class="choice-button" type="button" data-step-choice="profissao" data-value="Médico"><strong>Médico</strong><span>Atendimento e renda especializada</span></button>
+              <button class="choice-button" type="button" data-step-choice="profissao" data-value="Profissional da área de saúde"><strong>Profissional da área de saúde</strong><span>Clínicas, plantões e carreira assistencial</span></button>
+              <button class="choice-button" type="button" data-step-choice="profissao" data-value="Empresário"><strong>Empresário</strong><span>Negócio, caixa e patrimônio</span></button>
+              <button class="choice-button" type="button" data-step-choice="profissao" data-value="Outros"><strong>Outros</strong><span>Outro perfil de renda e decisão</span></button>
+            </div>
+          </div>
 
-    <section id="diferenciais" class="section">
-      <div class="container">
-        <div class="services-head animate-hidden">
-          <div class="eyebrow">POR QUE A ITER</div>
-          <h2>O que nos torna diferentes</h2>
-          <p>Uma abordagem consultiva, integrada e sofisticada para quem quer pensar finanças com visão de futuro.</p>
-        </div>
-        <div class="differentials-list">
-          <article class="differential glass animate-hidden">
-            <div class="diff-copy">
-              <div class="diff-icon"><svg class="icon"><use href="#icon-orbit"></use></svg></div>
-              <div class="eyebrow" style="margin-bottom:2px;">VISÃO INTEGRADA</div>
-              <h3>Acreditamos que o planejamento financeiro deve considerar todas as dimensões da vida financeira.</h3>
-              <p>Integramos fluxo de caixa, investimentos, gestão de riscos, planejamento tributário e sucessório.</p>
+          <div class="step-panel" data-step="2">
+            <h2 class="step-title">Qual é a sua renda mensal?</h2>
+            <div class="choice-grid">
+              <button class="choice-button" type="button" data-step-choice="renda" data-value="Até R$ 10.000,00"><strong>Até R$ 10.000,00</strong></button>
+              <button class="choice-button" type="button" data-step-choice="renda" data-value="R$ 10.001 a R$ 20.000,00"><strong>R$ 10.001 a R$ 20.000,00</strong></button>
+              <button class="choice-button" type="button" data-step-choice="renda" data-value="R$ 20.001 a R$ 30.000,00"><strong>R$ 20.001 a R$ 30.000,00</strong></button>
+              <button class="choice-button" type="button" data-step-choice="renda" data-value="R$ 30.001 a R$ 50.000,00"><strong>R$ 30.001 a R$ 50.000,00</strong></button>
+              <button class="choice-button" type="button" data-step-choice="renda" data-value="Acima de R$ 50.000,00"><strong>Acima de R$ 50.000,00</strong></button>
             </div>
-          </article>
-          <article class="differential glass animate-hidden">
-            <div class="diff-copy">
-              <div class="diff-icon"><svg class="icon"><use href="#icon-fingerprint"></use></svg></div>
-              <div class="eyebrow" style="margin-bottom:2px;">PERSONALIZAÇÃO</div>
-              <h3>Cada cliente possui objetivos, desafios e momentos de vida únicos.</h3>
-              <p>Desenvolvemos soluções sob medida, alinhadas à realidade e às prioridades de cada pessoa ou família.</p>
-            </div>
-          </article>
-          <article class="differential glass animate-hidden">
-            <div class="diff-copy">
-              <div class="diff-icon"><svg class="icon"><use href="#icon-eye"></use></svg></div>
-              <div class="eyebrow" style="margin-bottom:2px;">TRANSPARÊNCIA</div>
-              <h3>Nossa atuação é baseada em relações de confiança.</h3>
-              <p>Trabalhamos com clareza, ética e total transparência em nossas recomendações e processos.</p>
-            </div>
-          </article>
-          <article class="differential glass animate-hidden">
-            <div class="diff-copy">
-              <div class="diff-icon"><svg class="icon"><use href="#icon-scale"></use></svg></div>
-              <div class="eyebrow" style="margin-bottom:2px;">INDEPENDÊNCIA E RESPONSABILIDADE</div>
-              <h3>Nosso compromisso é sempre com o melhor interesse do cliente.</h3>
-              <p>Oferecemos orientação imparcial e responsável para decisões financeiras mais conscientes.</p>
-            </div>
-          </article>
-          <article class="differential glass animate-hidden">
-            <div class="diff-copy">
-              <div class="diff-icon"><svg class="icon"><use href="#icon-horizon"></use></svg></div>
-              <div class="eyebrow" style="margin-bottom:2px;">VISÃO DE LONGO PRAZO</div>
-              <h3>Mais do que resultados imediatos, buscamos construir estratégias sustentáveis.</h3>
-              <p>Estruturas que apoiam a segurança financeira ao longo de toda a vida.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+          </div>
 
-    <section id="formulario" class="section">
-      <div class="container">
-        <div class="services-head animate-hidden">
-          <div class="eyebrow accent-amber">TRIAGEM CONFIDENCIAL</div>
-          <h2>Descubra o Melhor Caminho para Sua Independência Financeira</h2>
-          <p>Responda algumas perguntas objetivas e nossa equipe retorna com uma leitura personalizada do seu cenário.</p>
-        </div>
-        <div class="form-shell animate-hidden">
-          <aside class="form-side glass">
-            <div class="eyebrow accent-amber">TRIAGEM CONFIDENCIAL</div>
-            <h3>Uma conversa curta para entender seu cenário com precisão.</h3>
-            <p>Responda de forma objetiva. Em seguida, nossa equipe retorna com contexto e próximos passos claros.</p>
-            <ul class="trust-list">
-              <li>Sigilo e tratamento cuidadoso das informações.</li>
-              <li>Perguntas rápidas, sem burocracia desnecessária.</li>
-              <li>Retorno humano, consultivo e focado em resultado.</li>
-            </ul>
-            <div class="trust-note">Ideal para quem quer falar com uma consultoria que conduz o processo com clareza, discrição e seriedade.</div>
-          </aside>
-          <div id="formWrap">
-            <div class="form-progress-wrap">
-              <div class="progress-bar" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
-              <div class="step-caption" id="stepCaption">Passo 1 de 6</div>
+          <div class="step-panel" data-step="3">
+            <h2 class="step-title">Qual é o seu principal desafio financeiro hoje?</h2>
+            <div class="choice-grid is-wide">
+              <button class="choice-button" type="button" data-step-choice="desafio" data-value="Sair das dívidas"><strong>Sair das dívidas</strong><span>Precisamos aliviar pressão e custo</span></button>
+              <button class="choice-button" type="button" data-step-choice="desafio" data-value="Organizar o fluxo de caixa"><strong>Organizar o fluxo de caixa</strong><span>Entradas, saídas e previsibilidade</span></button>
+              <button class="choice-button" type="button" data-step-choice="desafio" data-value="Começar a investir / rentabilizar melhor"><strong>Começar a investir / rentabilizar melhor</strong><span>Capital parado precisa de direção</span></button>
+              <button class="choice-button" type="button" data-step-choice="desafio" data-value="Planejamento sucessório e proteção familiar"><strong>Planejamento sucessório e proteção familiar</strong><span>Blindar família e patrimônio</span></button>
+              <button class="choice-button" type="button" data-step-choice="desafio" data-value="Todos os anteriores"><strong>Todos os anteriores</strong><span>Visão completa é o melhor caminho</span></button>
             </div>
-            <form id="diagnosticForm" action="mailto:contato@itergrupo.net" enctype="text/plain">
-              <div class="form-card glass">
-                <div class="form-step active" data-step="1">
-                  <h3 class="step-title">Qual é a sua profissão?</h3>
-                  <div class="choice-grid grid-3">
-                    <button type="button" class="choice-card" data-group="profession" data-value="Médico">
-                      <svg class="choice-icon"><use href="#icon-medical"></use></svg>
-                      <div class="choice-content"><strong>Médico</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="profession" data-value="Profissional da Área de Saúde">
-                      <svg class="choice-icon"><use href="#icon-health"></use></svg>
-                      <div class="choice-content"><strong>Profissional da Área de Saúde</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="profession" data-value="Empresário">
-                      <svg class="choice-icon"><use href="#icon-business"></use></svg>
-                      <div class="choice-content"><strong>Empresário</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="profession" data-value="Outros">
-                      <svg class="choice-icon"><use href="#icon-person"></use></svg>
-                      <div class="choice-content"><strong>Outros</strong></div>
-                    </button>
-                  </div>
+          </div>
+
+          <div class="step-panel" data-step="4">
+            <h2 class="step-title">Você já possui investimentos financeiros?</h2>
+            <div class="choice-grid is-wide">
+              <button class="choice-button" type="button" data-step-choice="investimentos" data-value="Ainda não possuo investimentos"><strong>Ainda não possuo investimentos</strong></button>
+              <button class="choice-button" type="button" data-step-choice="investimentos" data-value="Apenas reserva de emergência (Poupança / CDB)"><strong>Apenas reserva de emergência</strong><span>Poupança ou CDB</span></button>
+              <button class="choice-button" type="button" data-step-choice="investimentos" data-value="Invisto em corretora, mas busco diversificação"><strong>Invisto em corretora, mas busco diversificação</strong></button>
+              <button class="choice-button" type="button" data-step-choice="investimentos" data-value="Possuo patrimônio relevante e busco gestão profissional"><strong>Possuo patrimônio relevante e busco gestão profissional</strong></button>
+            </div>
+          </div>
+
+          <div class="step-panel" data-step="5">
+            <h2 class="step-title">Qual é o seu nível de prioridade para organização financeira?</h2>
+            <div class="choice-grid is-wide">
+              <button class="choice-button" type="button" data-step-choice="prioridade" data-value="Baixa"><strong>Baixa</strong><span>Estou apenas pesquisando para o futuro</span></button>
+              <button class="choice-button" type="button" data-step-choice="prioridade" data-value="Média"><strong>Média</strong><span>Quero me organizar nos próximos meses</span></button>
+              <button class="choice-button" type="button" data-step-choice="prioridade" data-value="Alta"><strong>Alta</strong><span>Quero resolver minha vida financeira agora</span></button>
+            </div>
+          </div>
+
+          <div class="step-panel" data-step="6">
+            <h2 class="step-title">Quase lá. Como podemos entrar em contato?</h2>
+            <div class="step-contact">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="nome">Nome completo</label>
+                  <input id="nome" name="nome" type="text" autocomplete="name" required>
                 </div>
-
-                <div class="form-step" data-step="2">
-                  <h3 class="step-title">Qual é a sua renda mensal?</h3>
-                  <div class="choice-grid">
-                    <button type="button" class="choice-card" data-group="income" data-value="Até R$ 10.000"><div class="choice-content"><strong>Até R$ 10.000</strong></div></button>
-                    <button type="button" class="choice-card" data-group="income" data-value="R$ 10.001 a R$ 20.000"><div class="choice-content"><strong>R$ 10.001 a R$ 20.000</strong></div></button>
-                    <button type="button" class="choice-card" data-group="income" data-value="R$ 20.001 a R$ 30.000"><div class="choice-content"><strong>R$ 20.001 a R$ 30.000</strong></div></button>
-                    <button type="button" class="choice-card" data-group="income" data-value="R$ 30.001 a R$ 50.000"><div class="choice-content"><strong>R$ 30.001 a R$ 50.000</strong></div></button>
-                    <button type="button" class="choice-card" data-group="income" data-value="Acima de R$ 50.000"><div class="choice-content"><strong>Acima de R$ 50.000</strong></div></button>
-                  </div>
+                <div class="form-field">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required>
                 </div>
-
-                <div class="form-step" data-step="3">
-                  <h3 class="step-title">Qual é o seu principal desafio financeiro hoje?</h3>
-                  <div class="choice-grid grid-3">
-                    <button type="button" class="choice-card" data-group="challenge" data-value="Sair das dívidas">
-                      <svg class="choice-icon"><use href="#icon-chains"></use></svg>
-                      <div class="choice-content"><strong>Sair das dívidas</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="challenge" data-value="Organizar o fluxo de caixa">
-                      <svg class="choice-icon"><use href="#icon-flow"></use></svg>
-                      <div class="choice-content"><strong>Organizar o fluxo de caixa</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="challenge" data-value="Começar a investir / rentabilizar melhor">
-                      <svg class="choice-icon"><use href="#icon-chart"></use></svg>
-                      <div class="choice-content"><strong>Começar a investir / rentabilizar melhor</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="challenge" data-value="Planejamento sucessório e proteção familiar">
-                      <svg class="choice-icon"><use href="#icon-shield"></use></svg>
-                      <div class="choice-content"><strong>Planejamento sucessório e proteção familiar</strong></div>
-                    </button>
-                    <button type="button" class="choice-card" data-group="challenge" data-value="Todos os anteriores">
-                      <svg class="choice-icon"><use href="#icon-star"></use></svg>
-                      <div class="choice-content"><strong>Todos os anteriores</strong></div>
-                    </button>
-                  </div>
+                <div class="form-field">
+                  <label for="whatsapp">WhatsApp</label>
+                  <input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
                 </div>
-
-                <div class="form-step" data-step="4">
-                  <h3 class="step-title">Você já possui investimentos financeiros?</h3>
-                  <div class="choice-grid">
-                    <button type="button" class="choice-card" data-group="investments" data-value="Ainda não possuo investimentos"><div class="choice-content"><strong>Ainda não possuo investimentos</strong></div></button>
-                    <button type="button" class="choice-card" data-group="investments" data-value="Apenas reserva de emergência (Poupança / CDB)"><div class="choice-content"><strong>Apenas reserva de emergência (Poupança / CDB)</strong></div></button>
-                    <button type="button" class="choice-card" data-group="investments" data-value="Invisto em corretora, mas busco diversificação"><div class="choice-content"><strong>Invisto em corretora, mas busco diversificação</strong></div></button>
-                    <button type="button" class="choice-card" data-group="investments" data-value="Possuo patrimônio relevante e busco gestão profissional"><div class="choice-content"><strong>Possuo patrimônio relevante e busco gestão profissional</strong></div></button>
-                  </div>
-                </div>
-
-                <div class="form-step" data-step="5">
-                  <h3 class="step-title">Qual é o seu nível de prioridade para organização financeira?</h3>
-                  <div class="choice-grid">
-                    <button type="button" class="choice-card priority-card" data-group="priority" data-value="Baixa — Estou apenas pesquisando para o futuro">
-                      <div class="choice-content"><strong><span class="priority-badge" style="background:rgba(138,155,184,0.14);color:#c6d0e2;border-color:rgba(138,155,184,0.2);">BAIXA</span> Estou apenas pesquisando para o futuro</strong></div>
-                    </button>
-                    <button type="button" class="choice-card priority-card" data-group="priority" data-value="Média — Gostaria de me organizar nos próximos meses">
-                      <div class="choice-content"><strong><span class="priority-badge">MÉDIA</span> Gostaria de me organizar nos próximos meses</strong></div>
-                    </button>
-                    <button type="button" class="choice-card priority-card high" data-group="priority" data-value="Alta — Quero resolver minha vida financeira imediatamente">
-                      <div class="choice-content"><strong><span class="priority-badge">PRIORIDADE</span> Quero resolver minha vida financeira imediatamente</strong></div>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="form-step" data-step="6">
-                  <h3 class="step-title">Quase lá! Como podemos entrar em contato?</h3>
-                  <div class="form-fields">
-                    <div class="field">
-                      <label for="name">Nome completo</label>
-                      <input id="name" name="name" type="text" placeholder="Seu nome completo" required>
-                    </div>
-                    <div class="field">
-                      <label for="email">E-mail</label>
-                      <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required>
-                    </div>
-                    <div class="field">
-                      <label for="phone">WhatsApp / Telefone</label>
-                      <input id="phone" name="phone" type="tel" placeholder="(00) 00000-0000" required inputmode="tel">
-                    </div>
-                    <div class="field">
-                      <label for="location">Cidade / Estado</label>
-                      <input id="location" name="location" type="text" placeholder="Ex.: Rio de Janeiro / RJ">
-                    </div>
-                    <label class="checkbox">
-                      <input id="consent" name="consent" type="checkbox" required>
-                      <span>Concordo em receber contato da ITER Eficiência Financeira por WhatsApp e e-mail.</span>
-                    </label>
-                  </div>
+                <div class="form-field">
+                  <label for="cidade">Cidade / Estado</label>
+                  <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
                 </div>
               </div>
-
-              <input type="hidden" id="profession" name="profession">
-              <input type="hidden" id="income" name="income">
-              <input type="hidden" id="challenge" name="challenge">
-              <input type="hidden" id="investments" name="investments">
-              <input type="hidden" id="priority" name="priority">
-
-              <div class="form-message" id="formMessage" aria-live="polite"></div>
-
-              <div class="form-nav">
-                <button type="button" class="btn btn-ghost" id="prevBtn">Anterior</button>
-                <button type="button" class="btn btn-primary" id="nextBtn">Próximo <svg class="icon" aria-hidden="true" style="width:16px;height:16px;"><use href="#icon-arrow"></use></svg></button>
-                <button type="submit" class="btn btn-primary hidden" id="submitBtn">Solicitar Análise Gratuita <svg class="icon" aria-hidden="true" style="width:16px;height:16px;"><use href="#icon-arrow"></use></svg></button>
-              </div>
-            </form>
-          </div>
-
-          <div class="success-card" id="successCard">
-            <div class="success-mark">
-              <svg class="icon" style="width:40px;height:40px;"><use href="#icon-check"></use></svg>
+              <label class="form-consent" style="margin: 0;">
+                <input type="checkbox" name="consentimento" required>
+                <span>Concordo em receber contato da ITER por WhatsApp e e-mail.</span>
+              </label>
             </div>
-            <h3 style="font-size:clamp(1.6rem,2.8vw,2.1rem);">Solicitação recebida com sucesso!</h3>
-            <p>Nossa equipe entrará em contato em breve. Enquanto isso, siga-nos no Instagram: <a class="accent" href="https://instagram.com/itergrupo" target="_blank" rel="noopener noreferrer">@itergrupo</a></p>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="section">
-      <div class="container contact-layout">
-        <div class="animate-hidden">
-          <div class="eyebrow">FALE COM A ITER</div>
-          <h2>Pronto para Dar o Próximo Passo?</h2>
-          <p style="margin-top:16px; max-width:46rem;">Nossa equipe está pronta para ajudar você a construir o caminho rumo à liberdade financeira.</p>
-          <div class="contact-list">
-            <a class="contact-item" href="tel:+5521971110685">
-              <svg class="icon"><use href="#icon-arrow"></use></svg>
-              <span>(21) 97111-0685</span>
-            </a>
-            <a class="contact-item" href="tel:+5538999478257">
-              <svg class="icon"><use href="#icon-arrow"></use></svg>
-              <span>(38) 99947-8257</span>
-            </a>
-            <a class="contact-item" href="mailto:contato@itergrupo.net">
-              <svg class="icon"><use href="#icon-mail"></use></svg>
-              <span>contato@itergrupo.net</span>
-            </a>
-            <a class="contact-item" href="https://instagram.com/itergrupo" target="_blank" rel="noopener noreferrer">
-              <svg class="icon"><use href="#icon-arrow"></use></svg>
-              <span>@itergrupo</span>
-            </a>
+          <div class="step-actions">
+            <button class="button button-ghost" type="button" id="prevStep">Anterior</button>
+            <button class="button" type="button" id="nextStep">Próximo →</button>
           </div>
-          <div class="contact-whatsapp">
-            <a class="quick-action wa" href="https://wa.me/5521971110685" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">
-              <svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg>
-              <span>Chamar no WhatsApp</span>
-            </a>
+          <div class="step-actions" id="finalActions" style="display:none;">
+            <button class="button button-ghost" type="button" id="prevStepFinal">Anterior</button>
+            <button class="button" type="submit" id="submitButton" style="width: 100%;">Quero falar com a ITER →</button>
           </div>
-        </div>
+          <div class="form-message" id="formMessage" role="status">Solicitação registrada com sucesso. Nossa equipe entrará em contato em breve.</div>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="brand">
-            <strong>ITER</strong>
-            <span>EFICIÊNCIA FINANCEIRA</span>
-          </div>
-          <p style="margin-top:14px; max-width:28rem;">Transformando suas finanças, impulsionando seu sucesso.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Serviços</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#formulario">Diagnóstico Gratuito</a>
-        </div>
-        <div class="footer-contact">
-          <a href="tel:+5521971110685">(21) 97111-0685</a>
-          <a href="tel:+5538999478257">(38) 99947-8257</a>
-          <a href="mailto:contato@itergrupo.net">contato@itergrupo.net</a>
-          <a href="https://instagram.com/itergrupo" target="_blank" rel="noopener noreferrer">@itergrupo</a>
-        </div>
-      </div>
-      <div class="footer-line"></div>
-      <div class="footer-bottom">
-        <span>© 2025 ITER Eficiência Financeira — Todos os direitos reservados. | Consultoria regulamentada pela CVM.</span>
-        <span>Desenvolvido com excelência.</span>
-      </div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>ITER Eficiência Financeira</strong> — Transformando suas finanças, impulsionando seu sucesso.</div>
+      <div><a href="https://wa.me/5521971110685" target="_blank" rel="noopener noreferrer">WhatsApp</a> · <a href="mailto:contato@itergrupo.net">contato@itergrupo.net</a></div>
     </div>
   </footer>
 
+  <div class="qualification-modal" id="qualificationModal" aria-hidden="true">
+    <div class="qualification-dialog" role="dialog" aria-modal="true" aria-labelledby="qualificationTitle">
+      <button class="qualification-close" type="button" id="qualificationClose" aria-label="Fechar mensagem">×</button>
+      <h2 id="qualificationTitle">A ITER Grupo agradece o seu contato, mas você ainda não está preparado(a) para os nossos produtos, temos certeza que muito em breve poderemos trabalhar juntos</h2>
+    </div>
+  </div>
+
   <script>
-    const header = document.getElementById('header');
-    const animatedEls = document.querySelectorAll('.animate-hidden');
-
-    const steps = Array.from(document.querySelectorAll('.form-step'));
-    const progressFill = document.getElementById('progressFill');
-    const stepCaption = document.getElementById('stepCaption');
-    const formMessage = document.getElementById('formMessage');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const submitBtn = document.getElementById('submitBtn');
-    const diagnosticForm = document.getElementById('diagnosticForm');
-    const formWrap = document.getElementById('formWrap');
-    const successCard = document.getElementById('successCard');
-    const phoneInput = document.getElementById('phone');
-
-    const hiddenFields = {
-      profession: document.getElementById('profession'),
-      income: document.getElementById('income'),
-      challenge: document.getElementById('challenge'),
-      investments: document.getElementById('investments'),
-      priority: document.getElementById('priority')
-    };
-
+    const header = document.querySelector(".site-header");
+    const animatedElements = document.querySelectorAll(".animate-hidden");
+    const form = document.querySelector("#leadForm");
+    const formMessage = document.querySelector("#formMessage");
+    const qualificationModal = document.querySelector("#qualificationModal");
+    const qualificationClose = document.querySelector("#qualificationClose");
+    const phoneInput = document.querySelector("#whatsapp");
+    const stepPanels = [...document.querySelectorAll(".step-panel")];
+    const progressFill = document.querySelector("#formProgressFill");
+    const stepCounter = document.querySelector("#stepCounter");
+    const stepHint = document.querySelector("#stepHint");
+    const nextStepButton = document.querySelector("#nextStep");
+    const prevStepButtons = [...document.querySelectorAll("#prevStep, #prevStepFinal")];
+    const finalActions = document.querySelector("#finalActions");
+    const submitButton = document.querySelector("#submitButton");
+    const defaultSubmitText = submitButton.textContent;
+    const stepLabels = ["Profissão", "Renda", "Desafio", "Investimentos", "Prioridade", "Contato"];
+    const answers = {};
+    const totalSteps = 6;
     let currentStep = 1;
-    let transitionDirection = 'next';
-    const totalSteps = steps.length;
-    const selections = {};
+    let qualificationOpen = false;
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
-        if (!target) return;
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 30);
     });
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          if (entry.target.classList.contains('number-card')) {
-            const count = entry.target.querySelector('.count');
-            if (count && !count.dataset.animated) {
-              count.dataset.animated = 'true';
-              animateCount(count);
-            }
-          }
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
 
-    animatedEls.forEach(el => observer.observe(el));
+    animatedElements.forEach((element) => observer.observe(element));
 
-    function animateCount(el) {
-      const target = parseInt(el.dataset.target, 10);
-      const prefix = el.dataset.prefix || '';
-      const suffix = el.dataset.suffix || '';
-      const duration = 2000;
-      const start = performance.now();
-
-      const tick = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const value = Math.floor(target * easeOutCubic(progress));
-        el.textContent = `${prefix}${value}${suffix}`;
-        if (progress < 1) requestAnimationFrame(tick);
-        else el.textContent = `${prefix}${target}${suffix}`;
-      };
-      requestAnimationFrame(tick);
-    }
-
-    function easeOutCubic(t) {
-      return 1 - Math.pow(1 - t, 3);
-    }
-
-    function updateFormUI() {
-      steps.forEach((step, index) => {
-        step.classList.toggle('active', index + 1 === currentStep);
-        step.classList.remove('enter-next', 'enter-prev');
-      });
-      const activeStep = document.querySelector(`.form-step[data-step="${currentStep}"]`);
-      if (activeStep) {
-        activeStep.classList.add(transitionDirection === 'prev' ? 'enter-prev' : 'enter-next');
-        window.requestAnimationFrame(() => {
-          activeStep.classList.remove('enter-next', 'enter-prev');
-        });
-      }
-      progressFill.style.width = `${(currentStep / totalSteps) * 100}%`;
-      stepCaption.textContent = `Passo ${currentStep} de ${totalSteps}`;
-      prevBtn.disabled = currentStep === 1;
-      prevBtn.style.opacity = currentStep === 1 ? '0.55' : '1';
-      nextBtn.classList.toggle('hidden', currentStep === totalSteps);
-      submitBtn.classList.toggle('hidden', currentStep !== totalSteps);
-      formMessage.textContent = '';
-    }
-
-    function getGroupName(stepNumber) {
-      return ['profession', 'income', 'challenge', 'investments', 'priority'][stepNumber - 1];
-    }
-
-    function validateStep(stepNumber) {
-      const group = getGroupName(stepNumber);
-      if (!selections[group]) {
-        formMessage.textContent = 'Selecione uma opção para continuar';
-        const activeStep = document.querySelector(`.form-step[data-step="${stepNumber}"]`);
-        const cards = activeStep.querySelectorAll('.choice-card');
-        cards.forEach(card => {
-          card.classList.remove('shake');
-          void card.offsetWidth;
-          card.classList.add('shake');
-        });
-        return false;
-      }
-      return true;
-    }
-
-    function syncHiddenFields() {
-      Object.entries(selections).forEach(([key, value]) => {
-        if (hiddenFields[key]) hiddenFields[key].value = value;
-      });
-    }
-
-    document.querySelectorAll('.choice-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const group = card.dataset.group;
-        const value = card.dataset.value;
-        selections[group] = value;
-        hiddenFields[group].value = value;
-        const cards = document.querySelectorAll(`.choice-card[data-group="${group}"]`);
-        cards.forEach(item => item.classList.toggle('selected', item === card));
-        formMessage.textContent = '';
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (event) => {
+        const target = document.querySelector(anchor.getAttribute("href"));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
 
-    nextBtn.addEventListener('click', () => {
-      if (!validateStep(currentStep)) return;
+    phoneInput.addEventListener("input", () => {
+      const digits = phoneInput.value.replace(/\D/g, "").slice(0, 11);
+      const first = digits.slice(0, 2);
+      const middle = digits.length > 10 ? digits.slice(2, 7) : digits.slice(2, 6);
+      const last = digits.length > 10 ? digits.slice(7, 11) : digits.slice(6, 10);
+      phoneInput.value = [
+        first ? `(${first}` : "",
+        first.length === 2 ? ") " : "",
+        middle,
+        last ? `-${last}` : ""
+      ].join("");
+    });
+
+    function showStep(step) {
+      currentStep = step;
+      stepPanels.forEach((panel) => {
+        panel.classList.toggle("is-active", Number(panel.dataset.step) === currentStep);
+      });
+
+      const progress = (currentStep / totalSteps) * 100;
+      progressFill.style.width = `${progress}%`;
+      stepCounter.textContent = `Passo ${currentStep} de ${totalSteps}`;
+      stepHint.textContent = stepLabels[currentStep - 1];
+      nextStepButton.style.display = currentStep === totalSteps ? "none" : "inline-flex";
+      finalActions.style.display = currentStep === totalSteps ? "flex" : "none";
+      if (currentStep === totalSteps) {
+        submitButton.textContent = defaultSubmitText;
+      }
+
+      prevStepButtons.forEach((button) => {
+        button.disabled = currentStep === 1;
+      });
+    }
+
+    function shakeCurrentStep() {
+      const activeStep = stepPanels.find((panel) => panel.classList.contains("is-active"));
+      if (!activeStep) return;
+      activeStep.classList.remove("is-shaking");
+      void activeStep.offsetWidth;
+      activeStep.classList.add("is-shaking");
+      setTimeout(() => activeStep.classList.remove("is-shaking"), 350);
+    }
+
+    function openQualificationModal() {
+      qualificationModal.classList.add("is-open");
+      qualificationModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      qualificationOpen = true;
+    }
+
+    function closeQualificationModal() {
+      qualificationModal.classList.remove("is-open");
+      qualificationModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      qualificationOpen = false;
+    }
+
+    document.querySelectorAll("[data-step-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const key = button.dataset.stepChoice;
+        const value = button.dataset.value;
+        answers[key] = value;
+
+        const panel = button.closest(".step-panel");
+        panel.querySelectorAll(`[data-step-choice="${key}"]`).forEach((choice) => {
+          choice.classList.toggle("is-selected", choice === button);
+        });
+
+      });
+    });
+
+    nextStepButton.addEventListener("click", () => {
+      const keys = ["profissao", "renda", "desafio", "investimentos", "prioridade"];
+      const currentKey = keys[currentStep - 1];
+      if (!answers[currentKey]) {
+        formMessage.classList.remove("is-warning");
+        formMessage.textContent = "Selecione uma opção para continuar.";
+        formMessage.classList.add("visible");
+        shakeCurrentStep();
+        return;
+      }
+
+      formMessage.classList.remove("visible");
       if (currentStep < totalSteps) {
-        transitionDirection = 'next';
-        currentStep += 1;
-        updateFormUI();
+        showStep(currentStep + 1);
       }
     });
 
-    prevBtn.addEventListener('click', () => {
-      if (currentStep > 1) {
-        transitionDirection = 'prev';
-        currentStep -= 1;
-        updateFormUI();
-      }
-    });
-
-    phoneInput.addEventListener('input', () => {
-      const digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
-      let formatted = '';
-      if (digits.length > 0) {
-        formatted = `(${digits.slice(0, 2)}`;
-        if (digits.length >= 2) formatted += ') ';
-        if (digits.length <= 2) {
-          formatted = `(${digits}`;
-        } else if (digits.length <= 6) {
-          formatted += digits.slice(2);
-        } else {
-          formatted += digits.slice(2, 7) + '-' + digits.slice(7);
+    prevStepButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        if (currentStep > 1) {
+          formMessage.classList.remove("visible");
+          showStep(currentStep - 1);
         }
-      }
-      phoneInput.value = formatted;
+      });
     });
 
-    diagnosticForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (!validateStep(currentStep)) return;
-
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const consent = document.getElementById('consent').checked;
-
-      if (!name || !email || !phone || !consent) {
-        formMessage.textContent = 'Preencha os campos obrigatórios para concluir.';
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
         return;
       }
 
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        formMessage.textContent = 'Digite um e-mail válido.';
+      const data = Object.fromEntries(new FormData(form).entries());
+      const payload = { ...answers, ...data };
+      console.log("Lead ITER:", payload);
+
+      const isNotQualified = payload.renda === "Até R$ 10.000,00";
+      const isProfissaoOutro = payload.profissao === "Outros";
+      const isPriorityLow = payload.prioridade === "Baixa";
+
+      if (isNotQualified || isProfissaoOutro || isPriorityLow) {
+        openQualificationModal();
         return;
       }
 
-      syncHiddenFields();
+      submitButton.textContent = "Enviar no Whatsapp";
 
-      const payload = {
-        ...selections,
-        name,
-        email,
-        phone,
-        location: document.getElementById('location').value.trim(),
-        consent
-      };
+      const message = [
+        "Olá, ITER. Gostaria de falar sobre meus resultados, preenchi seu formulário:",
+        "",
+        `Nome: ${payload.nome || "-"}`,
+        `Profissão: ${payload.profissao || "-"}`,
+        `Renda Mensal: ${payload.renda || "-"}`,
+        `Desafio Principal: ${payload.desafio || "-"}`,
+        `Investimentos: ${payload.investimentos || "-"}`,
+        `Prioridade: ${payload.prioridade || "-"}`,
+        "",
+        `Cidade: ${payload.cidade || "-"}`,
+        `WhatsApp: ${payload.whatsapp || "-"}`,
+        `${payload.email || "-"}`,
+        "",
+        "Como vocês podem me ajudar gerir melhor o meu dinheiro?"
+      ].join("\n");
 
-      console.log('ITER diagnóstico enviado:', payload);
-      formWrap.classList.add('hidden');
-      successCard.classList.add('visible');
-      successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const whatsappUrl = `https://wa.me/5521971110685?text=${encodeURIComponent(message)}`;
+      window.location.href = whatsappUrl;
     });
 
-    updateFormUI();
+    qualificationClose.addEventListener("click", closeQualificationModal);
+    qualificationModal.addEventListener("click", (event) => {
+      if (event.target === qualificationModal) {
+        closeQualificationModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && qualificationOpen) {
+        closeQualificationModal();
+      }
+    });
+
+    showStep(1);
   </script>
 </body>
 </html>
