@@ -942,6 +942,18 @@
       margin-top: 22px;
     }
 
+    .submit-note {
+      min-height: 22px;
+      margin-top: 14px;
+      color: var(--gold);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .submit-note[data-tone="error"] {
+      color: #d7a58e;
+    }
+
     .submit:disabled {
       cursor: not-allowed;
       opacity: .42;
@@ -1357,6 +1369,7 @@
               </div>
               <div class="form-actions"><button class="back" type="button">Voltar</button></div>
               <button class="cta submit" type="submit" disabled>Solicitar análise gratuita →</button>
+              <div class="submit-note" id="submit-note" aria-live="polite"></div>
             </section>
 
             <section class="result" id="success-message" aria-live="polite">
@@ -1405,8 +1418,10 @@
     const stepContext = document.querySelector('#step-context');
     const form = document.querySelector('#lead-form');
     const submitButton = document.querySelector('.submit');
+    const submitNote = document.querySelector('#submit-note');
     const fields = ['profissao', 'renda', 'desafio', 'urgencia'];
     const contexts = ['Perfil', 'Renda', 'Desafio', 'Urgência', 'Contato'];
+    const supabaseFunctionUrl = 'https://vimhszurdabyvozzvuxf.supabase.co/functions/v1/iter-qualified-lead';
     let currentStep = 1;
 
     const leadData = {
@@ -1544,11 +1559,46 @@
       submitButton.disabled = !(nome.length > 2 && whatsapp.length >= 10 && validEmail && consent);
     }
 
-    form.addEventListener('submit', event => {
+    function setSubmitNote(message, tone) {
+      submitNote.textContent = message || '';
+      submitNote.dataset.tone = tone || '';
+    }
+
+    function resetSubmitButton() {
+      submitButton.innerHTML = 'Solicitar análise gratuita →';
+      validateContact();
+    }
+
+    async function notifyQualifiedLead(payload) {
+      const response = await fetch(supabaseFunctionUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      let result = null;
+      try {
+        result = await response.json();
+      } catch (error) {
+        result = null;
+      }
+
+      if (!response.ok) {
+        const message = result && result.error ? result.error : 'Nao foi possivel enviar a notificacao agora.';
+        throw new Error(message);
+      }
+
+      return result;
+    }
+
+    form.addEventListener('submit', async event => {
       event.preventDefault();
       validateContact();
       if (submitButton.disabled) return;
 
+      setSubmitNote('', '');
       submitButton.innerHTML = '<span class="spinner" aria-hidden="true"></span> Enviando...';
       submitButton.disabled = true;
 
@@ -1559,10 +1609,17 @@
       leadData.isICP = !((leadData.profissao !== 'medico') && (leadData.renda === 'ate10k'));
 
       // Integração futura: enviar leadData via POST para webhook/CRM antes de exibir a confirmação.
-      window.setTimeout(() => {
+      try {
+        if (leadData.isICP) {
+          await notifyQualifiedLead(leadData);
+        }
         showMessage(leadData.isICP ? 'success' : 'waiting');
         console.info('ITER leadData', leadData);
-      }, 650);
+      } catch (error) {
+        console.error('ITER notifyQualifiedLead error', error);
+        resetSubmitButton();
+        setSubmitNote('Recebemos seus dados, mas houve uma falha momentanea ao notificar nossa equipe. Tente novamente em instantes.', 'error');
+      }
     });
 
     function showMessage(type) {
