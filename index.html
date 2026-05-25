@@ -959,18 +959,6 @@
       margin-top: 22px;
     }
 
-    .submit-note {
-      min-height: 22px;
-      margin-top: 14px;
-      color: var(--gold);
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .submit-note[data-tone="error"] {
-      color: #d7a58e;
-    }
-
     .submit:disabled {
       cursor: not-allowed;
       opacity: .42;
@@ -1386,15 +1374,14 @@
               </div>
               <div class="form-actions"><button class="back" type="button">Voltar</button></div>
               <button class="cta submit" type="submit" disabled>Solicitar análise gratuita →</button>
-              <div class="submit-note" id="submit-note" aria-live="polite"></div>
             </section>
 
             <section class="result" id="success-message" aria-live="polite">
               <div>
                 <svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="34" stroke="currentColor" stroke-width="2"/><path class="draw" d="M24 42 35 53 58 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <h3>Solicitação recebida!</h3>
-                <p>Nossa equipe entrará em contato em até 24 horas para agendar sua análise. Fique atento ao WhatsApp.</p>
-                <a class="ghost-cta" href="https://wa.me/5521971110685" target="_blank" rel="noopener">Entrar em contato</a>
+                <p>Toque em Entrar em contato para abrir o WhatsApp da ITER com seus dados preenchidos e enviar sua solicitação.</p>
+                <a class="ghost-cta" id="contact-cta" href="https://wa.me/5521971110685" target="_blank" rel="noopener">Entrar em contato</a>
               </div>
             </section>
 
@@ -1435,10 +1422,10 @@
     const stepContext = document.querySelector('#step-context');
     const form = document.querySelector('#lead-form');
     const submitButton = document.querySelector('.submit');
-    const submitNote = document.querySelector('#submit-note');
+    const contactCta = document.querySelector('#contact-cta');
     const fields = ['profissao', 'renda', 'desafio', 'urgencia'];
     const contexts = ['Perfil', 'Renda', 'Desafio', 'Urgência', 'Contato'];
-    const supabaseFunctionUrl = 'https://vimhszurdabyvozzvuxf.supabase.co/functions/v1/iter-qualified-lead';
+    const iterWhatsAppNumber = '5521971110685';
     let currentStep = 1;
 
     const leadData = {
@@ -1576,46 +1563,42 @@
       submitButton.disabled = !(nome.length > 2 && whatsapp.length >= 10 && validEmail && consent);
     }
 
-    function setSubmitNote(message, tone) {
-      submitNote.textContent = message || '';
-      submitNote.dataset.tone = tone || '';
-    }
-
     function resetSubmitButton() {
       submitButton.innerHTML = 'Solicitar análise gratuita →';
       validateContact();
     }
 
-    async function notifyQualifiedLead(payload) {
-      const response = await fetch(supabaseFunctionUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
-      });
-
-      let result = null;
-      try {
-        result = await response.json();
-      } catch (error) {
-        result = null;
-      }
-
-      if (!response.ok) {
-        const message = result && result.error ? result.error : 'Nao foi possivel enviar a notificacao agora.';
-        throw new Error(message);
-      }
-
-      return result;
+    function labelFromSelected(field, fallback) {
+      const selected = document.querySelector(`[data-field="${field}"] .choice.is-selected`);
+      return selected ? selected.innerText.replace(/\s+/g, ' ').trim() : fallback;
     }
 
-    form.addEventListener('submit', async event => {
+    function buildQualifiedLeadMessage(payload) {
+      return [
+        'Ola, equipe ITER. Solicito minha analise gratuita.',
+        '',
+        `Nome: ${payload.nome}`,
+        `WhatsApp: ${payload.whatsapp}`,
+        `E-mail: ${payload.email}`,
+        `Profissao: ${labelFromSelected('profissao', payload.profissao)}`,
+        `Renda mensal: ${labelFromSelected('renda', payload.renda)}`,
+        `Maior desafio: ${labelFromSelected('desafio', payload.desafio)}`,
+        `Urgencia: ${labelFromSelected('urgencia', payload.urgencia)}`,
+        '',
+        'Aguardo o contato para agendamento da analise.'
+      ].join('\n');
+    }
+
+    function updateContactCta(payload) {
+      const message = encodeURIComponent(buildQualifiedLeadMessage(payload));
+      contactCta.href = `https://wa.me/${iterWhatsAppNumber}?text=${message}`;
+    }
+
+    form.addEventListener('submit', event => {
       event.preventDefault();
       validateContact();
       if (submitButton.disabled) return;
 
-      setSubmitNote('', '');
       submitButton.innerHTML = '<span class="spinner" aria-hidden="true"></span> Enviando...';
       submitButton.disabled = true;
 
@@ -1625,18 +1608,13 @@
       leadData.timestamp = new Date().toISOString();
       leadData.isICP = !((leadData.profissao !== 'medico') && (leadData.renda === 'ate10k'));
 
-      // Integração futura: enviar leadData via POST para webhook/CRM antes de exibir a confirmação.
-      try {
+      window.setTimeout(() => {
         if (leadData.isICP) {
-          await notifyQualifiedLead(leadData);
+          updateContactCta(leadData);
         }
         showMessage(leadData.isICP ? 'success' : 'waiting');
         console.info('ITER leadData', leadData);
-      } catch (error) {
-        console.error('ITER notifyQualifiedLead error', error);
-        resetSubmitButton();
-        setSubmitNote('Recebemos seus dados, mas houve uma falha momentanea ao notificar nossa equipe. Tente novamente em instantes.', 'error');
-      }
+      }, 450);
     });
 
     function showMessage(type) {
