@@ -1689,8 +1689,8 @@
       leadData.whatsapp = document.querySelector('#whatsapp').value.trim();
       leadData.email = document.querySelector('#email').value.trim();
       leadData.timestamp = new Date().toISOString();
-      // Regra de qualificação: apenas médicos seguem para o fluxo de WhatsApp.
-      leadData.isICP = leadData.profissao === 'medico';
+      // Regra de qualificação: apenas médicos acima de R$ 10.000 seguem para o WhatsApp.
+      leadData.isICP = leadData.profissao === 'medico' && leadData.renda !== 'ate10k';
 
       window.setTimeout(() => {
         if (leadData.isICP) {
