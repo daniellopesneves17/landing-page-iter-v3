@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -1002,19 +1002,50 @@
 
     .result h3 {
       font-family: var(--font-display);
-      font-size: clamp(34px, 8vw, 42px);
+      font-size: clamp(36px, 8vw, 46px);
       line-height: 1.05;
-    }
-
-    .result p {
-      max-width: 480px;
-      margin: 14px auto 0;
-      color: var(--gray);
-      line-height: 1.6;
     }
 
     .result .ghost-cta {
       margin-top: 24px;
+      width: min(100%, 460px);
+      min-height: 54px;
+      height: 54px;
+      padding: 0 30px;
+      font-size: 17px;
+      font-weight: 700;
+      gap: 12px;
+      color: var(--black);
+      background: linear-gradient(180deg, #62c882 0%, #4caf6e 55%, #439a60 100%);
+      border: 1px solid rgba(104, 210, 130, .7);
+      border-radius: 10px;
+      box-shadow:
+        0 14px 34px rgba(76, 175, 110, .24),
+        0 0 0 1px rgba(76, 175, 110, .08) inset,
+        0 0 0 0 rgba(76, 175, 110, .16);
+      animation: contactPulse 2.8s ease-in-out infinite;
+      text-shadow: 0 1px 0 rgba(245, 245, 240, .12);
+    }
+
+    .result .contact-cta__icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .result .ghost-cta:hover {
+      background: linear-gradient(180deg, #6cd089 0%, #53b873 55%, #469c62 100%);
+      transform: translateY(-2px) scale(1.01);
+      box-shadow:
+        0 18px 44px rgba(76, 175, 110, .32),
+        0 0 0 1px rgba(76, 175, 110, .14) inset;
+    }
+
+    .result .ghost-cta span {
+      position: relative;
+      top: .5px;
     }
 
     .footer {
@@ -1100,6 +1131,23 @@
 
     @keyframes drawCheck {
       to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes contactPulse {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow:
+          0 14px 34px rgba(76, 175, 110, .24),
+          0 0 0 1px rgba(76, 175, 110, .08) inset,
+          0 0 0 0 rgba(76, 175, 110, .15);
+      }
+      50% {
+        transform: translateY(-1px) scale(1.008);
+        box-shadow:
+          0 18px 44px rgba(76, 175, 110, .32),
+          0 0 0 1px rgba(76, 175, 110, .14) inset,
+          0 0 0 12px rgba(76, 175, 110, .04);
+      }
     }
 
     @keyframes spin {
@@ -1379,9 +1427,13 @@
             <section class="result" id="success-message" aria-live="polite">
               <div>
                 <svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="40" r="34" stroke="currentColor" stroke-width="2"/><path class="draw" d="M24 42 35 53 58 28" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <h3>Solicitação recebida!</h3>
-                <p>Toque em Entrar em contato para abrir o WhatsApp da ITER com seus dados preenchidos e enviar sua solicitação.</p>
-                <a class="ghost-cta" id="contact-cta" href="https://wa.me/5521971110685" target="_blank" rel="noopener">Entrar em contato</a>
+                <h3 id="success-title">Obrigado!</h3>
+                <a class="ghost-cta" id="contact-cta" href="https://wa.me/5521971110685" target="_blank" rel="noopener">
+                  <svg class="contact-cta__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M19.96 4.04A10.9 10.9 0 0 0 12.05 1C6 1 1.1 5.87 1.1 11.87c0 2.06.56 4.08 1.63 5.82L1 23l5.53-1.62a10.92 10.92 0 0 0 5.52 1.48h.01c6.05 0 10.95-4.87 10.95-10.87 0-2.91-1.15-5.66-3.05-7.95Zm-7.91 17.2h-.01a9 9 0 0 1-4.59-1.26l-.33-.2-3.28.96.98-3.21-.22-.34a8.99 8.99 0 0 1-1.42-4.84c0-4.98 4.09-9.03 9.12-9.03a9 9 0 0 1 6.37 2.61 8.92 8.92 0 0 1 2.66 6.42c0 4.97-4.09 8.9-9.28 8.9Zm5.27-6.8c-.29-.15-1.72-.85-1.99-.95-.27-.1-.47-.15-.67.15-.2.29-.77.95-.95 1.14-.17.19-.35.22-.64.08-.29-.15-1.23-.45-2.34-1.43-.87-.78-1.46-1.74-1.63-2.03-.17-.28-.02-.44.12-.58.12-.12.29-.32.43-.48.14-.16.19-.29.29-.48.1-.19.05-.36-.03-.5-.08-.14-.66-1.55-.9-2.12-.24-.57-.48-.49-.66-.5h-.56c-.2 0-.5.08-.76.37-.26.29-1 1-.99 2.39 0 1.39 1.02 2.73 1.16 2.92.14.2 2.03 3.14 4.92 4.41.69.3 1.22.47 1.64.61.69.22 1.31.2 1.8.12.55-.09 1.72-.71 1.96-1.39.24-.68.24-1.26.17-1.39-.07-.13-.26-.2-.56-.35Z"/>
+                  </svg>
+                  <span>Entrar em contato</span>
+                </a>
               </div>
             </section>
 
@@ -1389,7 +1441,7 @@
               <div>
                 <svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><path d="M40 12a28 28 0 1 1-23.4 12.6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path class="draw" d="M16 14v11h11M40 25v17l12 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 <h3>Obrigado pelo interesse!</h3>
-                <p>No momento não temos um produto ideal para o seu perfil, mas isso pode mudar em breve. Guardamos seu contato e você será o primeiro a saber quando tivermos uma solução certa para você.</p>
+                <p>No momento, seu perfil não se encaixa no atendimento prioritário da ITER. Seguiremos com sua solicitação em espera e, se o nosso posicionamento mudar no futuro, você poderá ser contactado novamente.</p>
               </div>
             </section>
           </div>
@@ -1573,19 +1625,50 @@
       return selected ? selected.innerText.replace(/\s+/g, ' ').trim() : fallback;
     }
 
+    function selectedLabel(field, fallback) {
+      const value = leadData[field];
+      const labelMap = {
+        profissao: {
+          medico: 'Médico',
+          saude: 'Profissional da Saúde',
+          empresario: 'Empresário',
+          outro: 'Outro Perfil'
+        },
+        renda: {
+          ate10k: 'Até R$ 10.000',
+          '10k20k': 'R$ 10.001 a R$ 20.000',
+          '20k30k': 'R$ 20.001 a R$ 30.000',
+          '30k50k': 'R$ 30.001 a R$ 50.000',
+          acima50k: 'Acima de R$ 50.000'
+        },
+        desafio: {
+          dividas: 'Sair das dívidas',
+          fluxo: 'Organizar o fluxo de caixa',
+          investir: 'Investir melhor o que tenho',
+          proteger: 'Proteger família e patrimônio',
+          visao: 'Visão completa de tudo'
+        },
+        urgencia: {
+          agora: 'Agora — já está na hora',
+          meses: 'Nos próximos meses',
+          pesquisando: 'Ainda estou pesquisando'
+        }
+      };
+
+      return labelMap[field]?.[value] ?? fallback;
+    }
+
     function buildQualifiedLeadMessage(payload) {
       return [
-        'Ola, equipe ITER. Solicito minha analise gratuita.',
+        'Olá, vim por meio do formulário da página de vocês.',
         '',
         `Nome: ${payload.nome}`,
         `WhatsApp: ${payload.whatsapp}`,
         `E-mail: ${payload.email}`,
-        `Profissao: ${labelFromSelected('profissao', payload.profissao)}`,
-        `Renda mensal: ${labelFromSelected('renda', payload.renda)}`,
-        `Maior desafio: ${labelFromSelected('desafio', payload.desafio)}`,
-        `Urgencia: ${labelFromSelected('urgencia', payload.urgencia)}`,
-        '',
-        'Aguardo o contato para agendamento da analise.'
+        `Profissão: ${selectedLabel('profissao', payload.profissao)}`,
+        `Renda mensal: ${selectedLabel('renda', payload.renda)}`,
+        `Maior desafio: ${selectedLabel('desafio', payload.desafio)}`,
+        `Urgência: ${selectedLabel('urgencia', payload.urgencia)}`
       ].join('\n');
     }
 
@@ -1606,7 +1689,8 @@
       leadData.whatsapp = document.querySelector('#whatsapp').value.trim();
       leadData.email = document.querySelector('#email').value.trim();
       leadData.timestamp = new Date().toISOString();
-      leadData.isICP = !((leadData.profissao !== 'medico') && (leadData.renda === 'ate10k'));
+      // Regra de qualificação: apenas médicos seguem para o fluxo de WhatsApp.
+      leadData.isICP = leadData.profissao === 'medico';
 
       window.setTimeout(() => {
         if (leadData.isICP) {
@@ -1621,8 +1705,13 @@
       document.querySelectorAll('.step').forEach(step => step.classList.remove('is-active'));
       document.querySelector('#success-message').classList.toggle('is-active', type === 'success');
       document.querySelector('#waiting-message').classList.toggle('is-active', type === 'waiting');
-      stepLabel.textContent = type === 'success' ? 'Concluído' : 'Recebido';
-      stepContext.textContent = type === 'success' ? 'Análise solicitada' : 'Contato guardado';
+      if (type === 'success') {
+        successTitle.textContent = 'Obrigado!';
+      } else {
+        successTitle.textContent = 'Obrigado!';
+      }
+      stepLabel.textContent = type === 'success' ? 'Qualificado' : 'Recebido';
+      stepContext.textContent = type === 'success' ? 'WhatsApp pronto' : 'Contato guardado';
       progress.style.width = '100%';
       progressTrack.setAttribute('aria-valuenow', '5');
     }
@@ -1635,3 +1724,4 @@
   </script>
 </body>
 </html>
+
