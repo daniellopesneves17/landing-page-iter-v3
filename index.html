@@ -1478,6 +1478,7 @@
     const fields = ['profissao', 'renda', 'desafio', 'urgencia'];
     const contexts = ['Perfil', 'Renda', 'Desafio', 'Urgência', 'Contato'];
     const iterWhatsAppNumber = '553899478257';
+    const qualifiedLeadEndpoint = 'https://vimhszurdabyvozzvuxf.supabase.co/functions/v1/iter-qualified-lead';
     let currentStep = 1;
 
     const leadData = {
@@ -1677,6 +1678,17 @@
       contactCta.href = `https://wa.me/${iterWhatsAppNumber}?text=${message}`;
     }
 
+    function notifyQualifiedLead(payload) {
+      fetch(qualifiedLeadEndpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(error => {
+        console.warn('ITER lead notification failed', error);
+      });
+    }
+
     form.addEventListener('submit', event => {
       event.preventDefault();
       validateContact();
@@ -1695,6 +1707,7 @@
       window.setTimeout(() => {
         if (leadData.isICP) {
           updateContactCta(leadData);
+          notifyQualifiedLead({ ...leadData });
         }
         showMessage(leadData.isICP ? 'success' : 'waiting');
         console.info('ITER leadData', leadData);
